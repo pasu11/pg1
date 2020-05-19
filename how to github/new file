@@ -1,0 +1,13 @@
+1. github create a repository xx
+2. install github desktop
+3. github desktop file - new respository,  
+ name: My_Website (or whatever the folder name of backup website)
+ path: /media/Backup/ (or path to the backup website upper 1 leve)
+4. click create respository
+5. repository - push  use pg1 as repository name if you want
+
+6. in github, click on the repository, then "setting"
+7. change it to public if not
+8. under github pages - source, change to master
+9. check under github pages, now you will see "your site is published at https://xxx.io/respository name
+
