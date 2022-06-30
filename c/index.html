@@ -1139,17 +1139,18 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
              document.write('</tr>')
           }
           //--></SCRIPT>
-          <script>
 
-function reloadIt() {
-    if (window.location.href.substr(-2) !== "?r") {
-        window.location = window.location.href + "?r";
-    }
-}
+	<script>
+		//this script reload the page once after 0.5 sec to fix the content not showing
+		//source: https://stackoverflow.com/questions/6985507/one-time-page-refresh-after-first-page-load
+	function reloadIt() {
+		if (window.location.href.substr(-2) !== "?r") {
+			window.location = window.location.href + "?r";
+		}
+	}
+	setTimeout('reloadIt()', 500)();
+	</script>
 
-setTimeout('reloadIt()', 1000)();
-
-</script>
       </TBODY></TABLE></TD>
   <TD vAlign=top align=middle width=40><BR><BR><BR>年<BR>
 <BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('YD')">▲</BUTTON><BR>
