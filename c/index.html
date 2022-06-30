@@ -44,14 +44,6 @@ Open Source 不代表放棄著作權，任何形式之引用或轉載前請來�
 <META content="Gregorian Solar Calendar and Chinese Lunar Calendar" name=description>
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
 <SCRIPT language=Javascript>
-// listen for load event in the window
-window.addEventListener("load", function () {
-  // do things after the DOM loads fully
-  alert("Everything is loaded");
-
-});
-</SCRIPT>
-<SCRIPT language=Javascript>
 <!--
 /*****************************************************************************
                                  個人偏好設定
@@ -1147,6 +1139,17 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
              document.write('</tr>')
           }
           //--></SCRIPT>
+          <script>
+
+function reloadIt() {
+    if (window.location.href.substr(-2) !== "?r") {
+        window.location = window.location.href + "?r";
+    }
+}
+
+setTimeout('reloadIt()', 1000)();
+
+</script>
       </TBODY></TABLE></TD>
   <TD vAlign=top align=middle width=40><BR><BR><BR>年<BR>
 <BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('YD')">▲</BUTTON><BR>
