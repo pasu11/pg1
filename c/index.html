@@ -1,11 +1,49 @@
+<!--
+        *******************************************
+         農曆月曆&世界時間 DHTML 程式 (美國中文版)
+        *******************************************
+             最後修改: 2009 年 3 月 20 日
 
-<!-- saved from url=(0031)https://pasu11.github.io/pg1/c/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>佛教月曆</title>
-<meta content="時間;世界時間;時區;農曆;陰曆;陽曆;月曆;曆法;節日;紀念日;時區;節氣;二十四節氣;干支;生肖;world time clock;gregorian solar;chinese lunar;calendar" name="keywords">
-<meta content="All" name="robots">
-<meta content="Gregorian Solar Calendar and Chinese Lunar Calendar" name="description">
 
-<script language="Javascript">
+如果您覺得這個程式不錯，您可以自由轉寄給親朋好友分享。自由使
+用範圍: 學校、學會、公會、公司內部、程式研究、個人網站供人查
+詢使用。
+
+Open Source 不代表放棄著作權，任何形式之引用或轉載前請來信告
+知。如需於「商業或營利」目的中使用此部份之程式碼或資料，需取
+得本人書面授權。
+
+最新版本與更新資訊於 http://sean.o4u.com/ap/calendar/ 公佈
+
+
+　                            歡迎來信互相討論研究與指正誤謬
+                      連絡方式：http://sean.o4u.com/contact/
+                      　　　　　　　　　　Sean Lin (林洵賢)
+                          尊重他人創作‧請勿刪除或變更此說明
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<HTML><HEAD><TITLE>佛教月曆</TITLE>
+<META content="時間;世界時間;時區;農曆;陰曆;陽曆;月曆;曆法;節日;紀念日;時區;節氣;二十四節氣;干支;生肖;world time clock;gregorian solar;chinese lunar;calendar" name=keywords>
+<META content=All name=robots>
+<META content="Gregorian Solar Calendar and Chinese Lunar Calendar" name=description>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT language=Javascript>
 <!--
 /*****************************************************************************
                                  個人偏好設定
@@ -219,7 +257,127 @@ var timeData = {
 "Toronto(多伦多)     	 ":["-0500","03S02|11F02","多伦多"]
 },
 
+"Asia (North, East) 北亞、東亞": {
+"Brunei             汶萊    ":["+0800","","斯里巴加萬港"],
+"Burma              緬甸    ":["+0630","","仰光"],
+"Cambodia           柬埔寨  ":["+0700","","金邊"],
+"China              中國    ":["+0800","","北京、重慶、上海、香港"],
+"China(Ulumuqi)     中國    ":["+0600","","烏魯木齊"],
+"Indonesia          印尼    ":["+0700","","耶加達"],
+"Japan              日本    ":["+0900","","東京、大阪、札幌"],
+"Korea              韓國    ":["+0900","","首爾"],
+"Kazakhstan(Almaty) 哈薩克  ":["+0600","","Almaty"],
+"Kazakhstan(Aqtau)  哈薩克  ":["+0400","","Aqtau"],
+"Kazakhstan(Aqtobe) 哈薩克  ":["+0500","","Aqtobe"],
+"Kirghizia          吉爾吉斯":["+0500","","比斯凱克"],
+"Laos               寮國    ":["+0700","","永珍"],
+"Malaysia           馬來西亞":["+0800","","吉隆坡"],
+"Mongolia           蒙古利亞":["+0800","03L03|09L03","烏蘭巴托(庫倫)"],
+"Philippines        菲律賓  ":["+0800","","馬尼拉"],
+"Russia(Anadyr)     俄羅斯  ":["+1300","03L03|10L03","阿那底河"],
+"Russia(Kamchatka)  俄羅斯  ":["+1200","03L03|10L03","堪察加半島"],
+"Russia(Magadan)    俄羅斯  ":["+1100","03L03|10L03","馬加丹"],
+"Russia(Vladivostok)俄羅斯  ":["+1000","03L03|10L03","海參威"],
+"Russia(Yakutsk)    俄羅斯  ":["+0900","03L03|10L03","雅庫次克"],
+"Singapore          新加坡  ":["+0800","","新加坡"],
+"Taiwan             台灣    ":["+0800","","台北、高雄"],
+"Thailand           泰國    ":["+0700","","曼谷"],
+"Vietnam            越南    ":["+0700","","河內"]
+},
+"Asia (South, West) 南亞、中亞、西亞": {
+"Afghanistan        阿富汗  ":["+0430","","喀布爾"],
+"Bahrain            巴林    ":["+0300","","麥納瑪"],
+"Bangladesh         孟加拉  ":["+0600","","達卡"],
+"Bhutan             不丹    ":["+0600","","辛布"],
+"Cyprus             賽普勒斯":["+0200","","尼古西亞"],
+"East Timor         東帝汶":["+0800","","帝力"],
+"India              印度    ":["+0530","","新德里、孟買、加爾各答"],
+"Iran               伊朗    ":["+0330","04 13|10 13","德黑蘭"],
+"Iraq               伊拉克  ":["+0300","04 13|10 13","巴格達"],
+"Israel             以色列  ":["+0200","04F53|09F53","耶路撒冷"],
+"Jordan             約旦    ":["+0200","","安曼"],
+"Kuwait             科威特  ":["+0300","","科威特市"],
+"Lebanon            黎巴嫩  ":["+0200","03L03|10L03","貝魯特"],
+"Maldives           馬爾地夫":["+0500","","瑪律"],
+"Nepal              尼泊爾  ":["+0545","","加德滿都"],
+"Oman               阿曼    ":["+0400","","馬斯喀特"],
+"Pakistan           巴基斯坦":["+0500","","喀拉蚩、伊斯蘭堡"],
+"Palestine          巴勒斯坦":["+0200","","耶路撒冷"],
+"Qatar              卡達    ":["+0300","","杜哈"],
+"Saudi Arabia       沙烏地阿拉伯":["+0300","","利雅德"],
+"Sri Lanka          斯里蘭卡":["+0600","","可倫坡"],
+"Syria              敘利亞  ":["+0200","04 13|10 13","大馬士革"],
+"Tajikistan         塔吉克  ":["+0500","","杜桑貝"],
+"Turkey             土耳其  ":["+0200","","伊斯坦堡"],
+"Turkmenistan       土庫曼  ":["+0500","","阿什哈巴德"],
+"United Arab Emirates 阿拉伯聯合大公國":["+0400","","阿布達比"],
+"Uzbekistan         烏茲別克":["+0500","","塔什干"],
+"Yemen              葉門    ":["+0300","","沙那"]
+},
+"Europe (North)     北歐": {
+"Denmark            丹麥":["+0100","04F03|10L03","哥本哈根"],
+"Faroe Is.(DK)      法羅群島(丹麥)":["+0100","","托爾斯港"],
+"Finland            芬蘭":["+0200","03L01|10L01","赫爾辛基"],
+"Iceland            冰島":["+0000","","雷克雅未克"],
+"Jan Mayen(NORWAY)  揚馬延島(挪威)":["-0100","","揚馬延島"],
+"Norwegian          挪威":["+0100","","奧斯陸"],
+"Svalbard(NORWAY)   斯瓦爾巴群島(挪威)":["+0100","","Longyearbyen"],
+"Sweden             瑞典":["+0100","03L01|10L01","斯德哥爾摩"]
+},
+"Europe (Eastern)   中歐、東歐": {
+"Armenia            亞美尼亞":["+0400","","葉里溫"],
+"Austria            奧地利  ":["+0100","03L01|10L01","維也納"],
+"Azerbaijan         亞塞拜然":["+0400","","巴庫"],
+"Belarus            白俄羅斯":["+0200","03L03|10L03","明斯克"],
+"Czech Republic     捷克    ":["+0100","","布拉格"],
+"Estonia            愛沙尼亞":["+0200","","塔林"],
+"Georgia            喬治亞  ":["+0500","","第比利斯"],
+"Germany            德國    ":["+0100","03L01|10L01","柏林"],
+"Hungarian          匈牙利  ":["+0100","","布達佩斯"],
+"Latvia             拉脫維亞":["+0200","","里加"],
+"Liechtenstein      列支敦斯登":["+0100","","瓦都茲"],
+"Lithuania          立陶宛  ":["+0200","","維爾紐斯"],
+"Moldova            摩爾多瓦":["+0200","","基希涅夫"],
+"Poland             波蘭    ":["+0100","","華沙"],
+"Rumania            羅馬尼亞":["+0200","","布加勒斯特"],
+"Russia(Moscow)     俄羅斯  ":["+0300","03L03|10L03","莫斯科"],
+"Russia(Volgograd)  俄羅斯  ":["+0300","03L03|10L03","伏爾哥格勒"],
+"Slovakia           斯洛伐克":["+0100","","布拉提斯拉瓦"],
+"Switzerland        瑞士    ":["+0100","03L01|10L01","蘇黎世"],
+"Ukraine            烏克蘭  ":["+0200","","基輔"],
+"Ukraine(Simferopol)烏克蘭  ":["+0300","","Simferopol"]
+},
+"Europe (Western)   西歐": {
+"Andorra            安道爾 ":["+0100","03L01|10L01","安道爾"],
+"Belgium            比利時 ":["+0100","03L01|10L01","布魯塞爾"],
+"Channel Is.(UK)    海峽群島(英)":["+0000","03L01|10L01","根西島、澤西島"],
+"France             法國   ":["+0100","03L01|10L01","巴黎"],
+"Gibraltar(UK)      直布羅陀(英)":["+0100","03L01|10L01","直布羅陀"],
+"Ireland            愛爾蘭 ":["+0000","03L01|10L01","都柏林"],
+"Isle of Man(UK)    人島(英)":["+0000","03L01|10L01","道格拉斯"],
+"Luxembourg         盧森堡 ":["+0100","03L01|10L01","盧森堡市"],
+"Monaco             摩納哥 ":["+0100","","摩納哥市"],
+"Netherlands        荷蘭   ":["+0100","03L01|10L01","阿姆斯特丹"],
+"United Kingdom     英國   ":["+0000","03L01|10L01","倫敦、愛丁堡"]
 
+},
+"Europe (South)     南歐": {
+"Albania            阿爾巴尼亞":["+0100","","地拉那"],
+"Bosnia             波士尼亞":["+0100","","塞拉耶佛"],
+"Bulgaria           保加利亞":["+0200","","索菲亞"],
+"Croatia            克羅埃西亞":["+0100","","札格雷布"],
+"Greece             希臘    ":["+0200","03L01|10L01","雅典"],
+"Holy See           教廷    ":["+0100","","梵蒂岡"],
+"Italy              義大利  ":["+0100","03L01|10L01","羅馬"],
+"Macedonia          馬其頓  ":["+0100","","斯高彼亞"],
+"Malta              馬爾他  ":["+0100","","瓦勒他"],
+"Montenegro         蒙特內哥羅":["+0100","","Podgorica"],
+"Portugal           葡萄牙  ":["+0000","03L01|10L01","里斯本"],
+"San Marino         聖馬利諾":["+0100","","聖馬利諾"],
+"Serbia             塞爾維亞":["+0100","","貝爾格萊德"],
+"Slovenia           斯洛維尼亞":["+0100","","盧布爾雅那"],
+"Span               西班牙  ":["+0100","03L01|10L01","馬德里"]
+},
 "America (North)    北美洲": {
 "Canada(NST)        加拿大":["-0330","03S02|11F02","紐芬蘭, St. John's, Goose Bay"],
 "Canada(AST)        加拿大":["-0400","03S02|11F02","Pangnirtung, Glace Bay"],
@@ -235,6 +393,165 @@ var timeData = {
 "US(Arizona)        美國      ":["-0700","","亞歷桑那"],
 "US(Alaska)         美國      ":["-0900","","朱諾"]
 },
+"America (South)    中南美洲": {
+"Anguilla(UK)       安圭拉(英)":["-0400","","瓦利"],
+"Antigua & Barbuda  安地卡及巴布達":["-0400","","聖約翰"],
+"Argentina          阿根廷  ":["-0300","","布宜諾斯艾利斯"],
+"Aruba(NL)          阿魯巴(荷)":["-0400","","奧拉涅斯塔德"],
+"Bahamas            巴哈馬  ":["-0500","","拿索"],
+"Barbados           巴貝多  ":["-0400","","橋鎮"],
+"Belize             貝里斯  ":["-0600","","貝爾墨邦"],
+"Bermuda(UK)        百慕達群島(英)":["-0400","","漢密爾頓"],
+"Bolivia            玻利維亞":["-0400","","拉巴斯"],
+"Brazil(AST)        巴西    ":["-0500","10F03|02L03","Porto Acre"],
+"Brazil(EST)        巴西    ":["-0300","10F03|02L03","里約熱內盧、巴西利亞"],
+"Brazil(FST)        巴西    ":["-0200","10F03|02L03","Noronha"],
+"Brazil(WST)        巴西    ":["-0400","10F03|02L03","Cuiaba"],
+"British Virgin Is.(UK)維爾京群島(英)":["-0400","","羅德城"],
+"Cayman Is.(UK)     開曼群島(英)":["-0500","","喬治敦"],
+"Chile              智利    ":["-0300","10F03|03F03","聖地牙哥"],
+"Chile              智利    ":["-0500","10F03|03F03","Hanga Roa"],
+"Colombia           哥倫比亞":["-0500","","波哥大"],
+"Costa Rica         哥斯大黎加":["-0600","","聖約瑟"],
+"Cuba               古巴    ":["-0500","04 13|10L03","哈瓦那"],
+"Dominica           多米尼克":["-0400","","羅梭"],
+"Dominican Republic 多明尼加":["-0400","","聖多明哥"],
+"Ecuador            厄瓜多  ":["-0500","","基多"],
+"El Salvador        薩爾瓦多":["-0600","","聖薩爾瓦多"],
+"Falkland Is.(UK)   福克蘭群島(英)":["-0300","09F03|04F03","史坦利"],
+"Grenada            格瑞那達":["-0400","","聖喬治"],
+"Guadeloupe(FR)     瓜德羅普(法)":["-0400","","巴斯特爾"],
+"Guatemala          瓜地馬拉":["-0600","","瓜地馬拉城"],
+"Guiana(FR)         圭亞那(法)":["-0300","","卡宴"],
+"Guyana             蓋亞那  ":["-0400","","佐治敦"],
+"Haiti              海地    ":["-0500","","太子港"],
+"Honduras           宏都拉斯":["-0600","","德古斯加巴"],
+"Jamaica            牙買加  ":["-0500","","京斯敦"],
+"Martinique(FR)     馬提尼克(法)":["-0400","","法蘭西堡"],
+"Mexico(Mazatlan)   墨西哥  ":["-0700","","Mazatlan"],
+"Mexico(首都)       墨西哥  ":["-0600","","墨西哥城"],
+"Mexico(蒂娃娜)     墨西哥  ":["-0800","","蒂娃娜"],
+"Montserrat(UK)     蒙特塞拉特(英)":["-0400","","普利茅斯"],
+"Antilles(NL)       安的列斯(荷)":["-0400","","威廉斯塔德"],
+"Nicaragua          尼加拉瓜":["-0500","","馬納瓜"],
+"Panama             巴拿馬  ":["-0500","","巴拿馬市"],
+"Paraguay           巴拉圭  ":["-0400","10F03|02L03","亞松森"],
+"Peru               祕魯    ":["-0500","","利馬"],
+"Puerto Rico(US)    波多黎各(美)":["-0400","","聖胡安"],
+"So. Georgia & So. Sandwich Is.(UK)南喬治和南三明治群島(英)":["-0200","","Grytviken"],
+"St. Kitts & Nevis  聖克里斯多福及尼維斯":["-0400","","巴士地"],
+"St. Lucia          聖露西亞":["-0400","","卡斯翠"],
+"St. Pierre & Miquelon(FR) 聖皮埃爾和密克隆群島(法)":["-0330","","聖皮埃爾市"],
+"St. Vincent & Grenadines 聖文森及格瑞那丁":["-0400","","金石城"],
+"Suriname           蘇利南":["-0300","","巴拉馬利波"],
+"Trinidad & Tobago  千里達及托巴哥":["-0400","","西班牙港"],
+"Turks & Caicos Is.(UK) 特克斯和凱科斯群島(英)":["-0500","","科伯恩城"],
+"Uruguay            烏拉圭  ":["-0300","","蒙特維多"],
+"Venezuela          委內瑞拉":["-0400","","卡拉卡斯"],
+"Virgin Is.(US)     維爾京群島(美)":["-0400","","夏洛特.阿馬里"]
+},
+"Africa (North)     北非": {
+"Morocco            摩洛哥  ":["+0000","","卡薩布蘭卡"],
+"Algeria            阿爾及利亞":["+0100","","阿爾及爾"],
+"Tunisia            突尼西亞":["+0100","","突尼斯"],
+"Libyan             利比亞  ":["+0200","","的黎波里"],
+"Egypt              埃及    ":["+0200","04L53|09L43","開羅"],
+"Sudan              蘇丹    ":["+0200","","卡土穆"]
+},
+"Africa (Western)   西非": {
+"Western Sahara     西撒哈拉":["+0000","","阿尤恩"],
+"Mauritania         茅利塔尼亞":["+0000","","諾克少"],
+"Mali               馬利    ":["+0000","","巴馬科"],
+"Niger              尼日    ":["+0100","","尼阿美"],
+"Chad               查德    ":["+0100","","恩加美納"],
+"Senegal            塞內加爾":["+0000","","達卡"],
+"Gambia             甘比亞  ":["+0000","","班竹"],
+"Guinea-Bissau      幾內亞比索":["+0000","","比索"],
+"Guinea             幾內亞  ":["+0000","","柯那克里"],
+"Sierra Leone       獅子山  ":["+0000","","自由城"],
+"Liberia            賴比瑞亞":["+0000","","蒙羅維亞"],
+"Ivory Coast        象牙海岸":["+0000","","雅穆索戈"],
+"Burkina Faso       布吉納法索":["+0000","","瓦加杜古"],
+"Ghana              迦納    ":["+0000","","阿克拉"],
+"Togo               多哥    ":["+0000","","洛梅"],
+"Benin              貝南    ":["+0100","","新港"],
+"Nigeria            奈及利亞":["+0100","","阿布札"],
+"Cape Verde         維德角島":["-0100","","培亞"],
+"Canary Is.(SP)     加納利群島(西班牙)":["-0100","","喬治城"]
+},
+"Africa (Central)   中非": {
+"Cameroon           喀麥隆  ":["+0100","","雅恩德"],
+"Cen.African Rep.   中非共和國":["+0100","","班基"],
+"Sao Tome & Principe聖多美普林西比":["+0000","","聖多美"],
+"Equatorial Guinea  赤道幾內亞":["+0100","","馬拉博"],
+"Gabon              加彭    ":["+0100","","自由市"],
+"Congo,Republic     剛果共和國":["+0100","","布拉薩市"],
+"Congo,Democratic   剛果民主共和國":["+0100","","金夏沙"]
+},
+"Africa (East)      東非": {
+"Eritrea            厄利垂亞":["+0300","","阿斯馬拉"],
+"Djibouti           吉布地  ":["+0300","","吉布地"],
+"Ethiopia           衣索比亞":["+0300","","阿迪斯阿貝巴"],
+"Somalia            索馬利亞":["+0300","","摩加迪休"],
+"Kenya              肯亞    ":["+0300","","奈洛比"],
+"Uganda             烏干達  ":["+0300","","坎帕拉"],
+"Rwanda             盧安達  ":["+0200","","吉佳利"],
+"Burundi            蒲隆地  ":["+0200","","布松布拉"],
+"Tanzania           坦尚尼亞":["+0300","","杜篤瑪"],
+"Malawi             馬拉威  ":["+0200","","里朗威"],
+"Mozambique         莫三比克":["+0200","","馬布多"],
+"Madagascar         馬達加斯加":["+0300","","安塔那那利佛"],
+"Comoros            葛摩    ":["+0300","","莫洛尼"],
+"Seychelles         塞席爾  ":["+0300","","維多利亞"],
+"Mauritius          模里西斯":["+0400","","路易士港"],
+"Mayotte(FR)        馬約特島(法)":["+0300","","Mamoutzou"],
+"Reunion(FR)        留尼旺島(法)":["+0400","","聖但尼"]
+},
+"Africa (South)     南非": {
+"Angola             安哥拉  ":["+0100","","魯安達"],
+"Zambia             尚比亞  ":["+0200","","路沙卡"],
+"Namibia            納米比亞":["+0200","09F03|04F03","溫吐克"],
+"Botswana           波札那  ":["+0200","","嘉伯隆里"],
+"Zimbabwe           辛巴威  ":["+0200","","哈拉雷"],
+"South Africa       南非    ":["+0200","","普利托里亞"],
+"Swaziland          史瓦濟蘭":["+0200","","墨巴本"],
+"Lesotho            賴索托  ":["+0200","","馬賽魯"],
+"Saint Helena(UK)   聖赫勒拿(英)":["-0100","","詹姆士城"]
+},
+"Oceania            大洋洲": {
+"American Samoa(US) 美屬薩摩亞(美)":["-1100","","派哥派哥港"],
+"Australia(Adelaide)澳大利亞  ":["+0930","10L03|03L03","阿德萊德"],
+"Australia(Brisbane)澳大利亞  ":["+1000","","布利斯班"],
+"Australia(Darwin)  澳大利亞  ":["+0930","","達爾文"],
+"Australia(Hobart)  澳大利亞  ":["+1000","10L03|03L03","霍巴特"],
+"Australia(Perth)   澳大利亞  ":["+0800","","伯斯"],
+"Australia(Sydney)  澳大利亞  ":["+1000","10L03|03L03","坎培拉、墨爾本、雪梨"],
+"Cook Islands(NZ)   庫克群島(紐)  ":["-1000","","阿瓦魯阿"],
+"Fiji               斐濟      ":["+1200","11F03|02L03","蘇瓦"],
+"Guam               關島      ":["+1000","","阿加納"],
+"Hawaii(US)         夏威夷(美)":["-1000","","檀香山"],
+"Kiribati           吉里巴斯  ":["+1100","","塔拉瓦"],
+"Marshall Is.       馬紹爾群島":["+1200","","Majuro"],
+"Micronesia         密克羅尼西亞":["+1000","","帕利基爾"],
+"Midway Is.(US)     中途島(美)":["-1100","","中途島"],
+"Nauru Rep.         諾魯共和國":["+1200","","雅連"],
+"New Calednia(FR)   新克里多尼亞(法)":["+1100","","Noumea"],
+"New Guined         新幾內亞  ":["+1000","","莫勒斯比港"],
+"New Zealand        紐西蘭    ":["+1200","10F03|04F63","奧克蘭"],
+"New Zealand(CHADT) 紐西蘭    ":["+1245","10F03|04F63","Waitaing"],
+"Niue(NZ)           紐埃(紐)      ":["-1100","","阿洛菲"],
+"Nor. Mariana Is.   北馬里亞納群島(美)":["+1000","","塞班島"],
+"Palau              帛琉      ":["+0900","","柯洛"],
+"Papua New Guinea   巴布亞紐幾內亞":["+1000","","莫爾斯貝港"],
+"Pitcairn Is.(UK)   皮特凱恩群島(英)":["-0830","","亞當斯敦"],
+"Polynesia(FR)      波利尼西亞(法)":["-1000","","巴比蒂、大溪地"],
+"Solomon Is.        索羅門群島":["+1100","","荷尼阿拉"],
+"Tokelau(NZ)        托克勞(紐)    ":["-1100","","努庫塔努"],
+"Tonga              東加      ":["+1300","10F63|04F63","努瓜婁發"],
+"Tuvalu             吐瓦魯    ":["+1200","","富那富提"],
+"Vanuatu            萬那杜    ":["+1100","","維拉港"],
+"Western Samoa      西薩摩亞  ":["-1100","","阿庇亞"],
+"國際換日線                   ":["-1200","","國際換日線"]
 }
 };
 
@@ -997,13 +1314,13 @@ function terminate() {
 
 
 //-->
-</script>
-<style>
+</SCRIPT>
+<STYLE>
 .todayColor { background-color: aqua; border: 2px ridge blue; }
-</style>
-</head>
-<body style="z-index:0; position: relative;" onload="initialize()" onunload="terminate()" onmousemove="mEvn(event)">
-<script language="Javascript"><!--
+</STYLE>
+</HEAD>
+<BODY style="z-index:0; position: relative;" onload=initialize() onunload=terminate() onmousemove="mEvn(event)">
+<SCRIPT language=Javascript><!--
 var agent = navigator.userAgent;
 var navVer = 0;
 var navName = '';
@@ -1024,48 +1341,64 @@ if(navVer == 0 || (navName=='IE'&&navVer<4) ) {
  document.write("<h1>你的瀏覽器無法執行此程式。</h1>此程式需在 IE 4.0 或 Firefox 1.0 以後的版本才能執行!!")
  document.close;
 }
-//--></script>
-<div id="detail" style="z-index: 3; width: 140px; position: absolute; height: 120px; visibility: hidden; left: 799px; top: 283px;"><table width="130" border="0" cellpadding="2" cellspacing="0" bgcolor="#000066" style="opacity:0.8; -moz-opacity:0.8; filter:Alpha(opacity=80)"><tbody><tr><td><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td align="right"><font color="#ffffff" style="font-size:9pt;">2022 年 6 月 25 日<br>星期六<br><font color="violet">農曆 5 月 27 日</font><br><font color="yellow">壬寅年 丙午月 己酉日</font></font></td></tr></tbody></table></td></tr></tbody></table></div>
-<center>
-<table border="0">
-<tbody>
-<tr><!------------------------------ 世界時間 ----------------------------------->
-  <form name="WorldClock"></form>
-  <td valign="top" align="middle" width="240"><font style="FONT-SIZE: 9pt" size="2">本地時間</font><br><span id="LocalTime" style="FONT-SIZE: 11pt; COLOR: #000080; FONT-FAMILY: Arial">2022年6月30日 (四) 上午 11:50:21</span>
-    <p><span id="City" style="FONT-SIZE: 9pt; WIDTH: 150px; FONT-FAMILY: &#39;新細明體&#39;"><span style="font-size:12pt;font-family:Wingdings; color:Red;"></span> 多伦多</span>
-    <br><span id="GlobeTime" style="FONT-SIZE: 11pt; COLOR: #000080; FONT-FAMILY: Arial">2022年6月30日 (四) 上午 11:50:21</span><br>
-    <table style="FONT-SIZE: 10pt; FONT-FAMILY: Wingdings">
-      <tbody>
-      <tr>
-        <td align="middle"><div id="map" style="FILTER: Light; OVERFLOW: hidden; WIDTH: 0px; HEIGHT: 0px; BACKGROUND-COLOR: mediumblue"><font id="world" face="Webdings" style="font-size: 185px; left: -190px; color: green; position: relative; top: -26px;">ûû</font></div></td>
-        </tr></tbody></table><br><select style="FONT: 9pt &#39;細明體&#39;; WIDTH: 240px; BACKGROUND-COLOR: #e0e0ff" onchange="chContinent()" name="continentMenu"><option value="Canada			    加拿大">Canada			    加拿大</option></select><br><select style="FONT: 9pt &#39;細明體&#39;; WIDTH: 240px; BACKGROUND-COLOR: #e0e0ff" onchange="chCountry()" name="countryMenu"><option value="Toronto(多伦多)     	 ">Toronto(多伦多)     	 </option></select></p></td>
+//--></SCRIPT>
+<DIV id=detail
+style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; POSITION: absolute; HEIGHT: 120px"></DIV>
+<CENTER>
+<TABLE border=0>
+<TBODY>
+<TR><!------------------------------ 世界時間 ----------------------------------->
+  <FORM name=WorldClock>
+  <TD vAlign=top align=middle width=240><FONT style="FONT-SIZE: 9pt"
+    size=2>本地時間</FONT><BR><SPAN id=LocalTime
+    style="FONT-SIZE: 11pt; COLOR: #000080; FONT-FAMILY: Arial">0000年0月0日 (　)
+    　午 00:00:00</SPAN>
+    <P><SPAN id=City
+    style="FONT-SIZE: 9pt; WIDTH: 150px; FONT-FAMILY: '新細明體'">台灣</SPAN>
+    <BR><SPAN id=GlobeTime
+    style="FONT-SIZE: 11pt; COLOR: #000080; FONT-FAMILY: Arial">0000年0月0日 (　)
+    　午 00:00:00</SPAN><BR>
+    <TABLE style="FONT-SIZE: 10pt; FONT-FAMILY: Wingdings">
+      <TBODY>
+      <TR>
+        <TD align=middle><DIV id=map
+          style="FILTER: Light; OVERFLOW: hidden; WIDTH: 0px; HEIGHT: 0px; BACKGROUND-COLOR: mediumblue"><FONT
+            id=world face="Webdings" style="FONT-SIZE: 185px; LEFT: 0px; COLOR: green; POSITION: relative; TOP: -26px">&#251;&#251;</FONT></DIV></TD>
+        </TR></TBODY></TABLE><BR><SELECT
+    style="FONT: 9pt '細明體'; WIDTH: 240px; BACKGROUND-COLOR: #e0e0ff"
+    onchange=chContinent() name=continentMenu></SELECT><BR><SELECT
+    style="FONT: 9pt '細明體'; WIDTH: 240px; BACKGROUND-COLOR: #e0e0ff"
+    onchange=chCountry() name=countryMenu></SELECT></P></TD></FORM>
     <!------------------------------ 萬年曆 ----------------------------------->
-  <form name="CLD" onsubmit="return false;"></form>
-  <td align="middle">
-    <div style="Z-INDEX: -1; POSITION: absolute; TOP: 30px">
-    <font id="YMBG" style="FONT-SIZE: 100pt; COLOR: #f0f0f0; FONT-FAMILY: &#39;Arial Black&#39;">&nbsp;2022<br>&nbsp;JUN</font>
-    </div>
-    <table border="0" width="500">
-      <tbody>
-      <tr>
-        <td bgcolor="#000080" colspan="7" align="center"><font style="FONT-SIZE: 9pt" color="#ffffff" size="2">西曆<select style="FONT-SIZE: 9pt" onchange="changeCld()" name="SY">
-            <script language="Javascript"><!--
+  <FORM name=CLD onsubmit="return false;">
+  <TD align=middle>
+    <DIV style="Z-INDEX: -1; POSITION: absolute; TOP: 30px">
+    <FONT id=YMBG style="FONT-SIZE: 100pt; COLOR: #f0f0f0; FONT-FAMILY: 'Arial Black'">&nbsp;0000<BR>&nbsp;JUN</FONT>
+    </DIV>
+    <TABLE border=0 width=500>
+      <TBODY>
+      <TR>
+        <TD bgColor=#000080 colSpan=7 align=center><FONT style="FONT-SIZE: 9pt"
+          color=#ffffff size=2>西曆<SELECT style="FONT-SIZE: 9pt" onchange=changeCld() name=SY>
+            <SCRIPT language=Javascript><!--
           for(i=1900;i<2101;i++) document.write('<option>'+i)
-          //--></script><option>1900</option><option>1901</option><option>1902</option><option>1903</option><option>1904</option><option>1905</option><option>1906</option><option>1907</option><option>1908</option><option>1909</option><option>1910</option><option>1911</option><option>1912</option><option>1913</option><option>1914</option><option>1915</option><option>1916</option><option>1917</option><option>1918</option><option>1919</option><option>1920</option><option>1921</option><option>1922</option><option>1923</option><option>1924</option><option>1925</option><option>1926</option><option>1927</option><option>1928</option><option>1929</option><option>1930</option><option>1931</option><option>1932</option><option>1933</option><option>1934</option><option>1935</option><option>1936</option><option>1937</option><option>1938</option><option>1939</option><option>1940</option><option>1941</option><option>1942</option><option>1943</option><option>1944</option><option>1945</option><option>1946</option><option>1947</option><option>1948</option><option>1949</option><option>1950</option><option>1951</option><option>1952</option><option>1953</option><option>1954</option><option>1955</option><option>1956</option><option>1957</option><option>1958</option><option>1959</option><option>1960</option><option>1961</option><option>1962</option><option>1963</option><option>1964</option><option>1965</option><option>1966</option><option>1967</option><option>1968</option><option>1969</option><option>1970</option><option>1971</option><option>1972</option><option>1973</option><option>1974</option><option>1975</option><option>1976</option><option>1977</option><option>1978</option><option>1979</option><option>1980</option><option>1981</option><option>1982</option><option>1983</option><option>1984</option><option>1985</option><option>1986</option><option>1987</option><option>1988</option><option>1989</option><option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option><option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option><option>2000</option><option>2001</option><option>2002</option><option>2003</option><option>2004</option><option>2005</option><option>2006</option><option>2007</option><option>2008</option><option>2009</option><option>2010</option><option>2011</option><option>2012</option><option>2013</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option><option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option><option>2031</option><option>2032</option><option>2033</option><option>2034</option><option>2035</option><option>2036</option><option>2037</option><option>2038</option><option>2039</option><option>2040</option><option>2041</option><option>2042</option><option>2043</option><option>2044</option><option>2045</option><option>2046</option><option>2047</option><option>2048</option><option>2049</option><option>2050</option><option>2051</option><option>2052</option><option>2053</option><option>2054</option><option>2055</option><option>2056</option><option>2057</option><option>2058</option><option>2059</option><option>2060</option><option>2061</option><option>2062</option><option>2063</option><option>2064</option><option>2065</option><option>2066</option><option>2067</option><option>2068</option><option>2069</option><option>2070</option><option>2071</option><option>2072</option><option>2073</option><option>2074</option><option>2075</option><option>2076</option><option>2077</option><option>2078</option><option>2079</option><option>2080</option><option>2081</option><option>2082</option><option>2083</option><option>2084</option><option>2085</option><option>2086</option><option>2087</option><option>2088</option><option>2089</option><option>2090</option><option>2091</option><option>2092</option><option>2093</option><option>2094</option><option>2095</option><option>2096</option><option>2097</option><option>2098</option><option>2099</option><option>2100
-          </option></select>年<select style="FONT-SIZE: 9pt" onchange="changeCld()" name="SM">
-            <script language="JavaScript"><!--
+          //--></SCRIPT>
+          </SELECT>年<SELECT style="FONT-SIZE: 9pt" onchange=changeCld()
+          name=SM>
+            <SCRIPT language=JavaScript><!--
           for(i=1;i<13;i++) document.write('<option>'+i)
-          //--></script><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12
-          </option></select>月</font> <font id="GZ" face="標楷體" color="#ffffff" size="4"></font><br></td></tr>
-      <tr align="middle" bgcolor="#e0e0e0">
-        <td width="65">日</td>
-        <td width="65">一</td>
-        <td width="65">二</td>
-        <td width="65">三</td>
-        <td width="65">四</td>
-        <td width="65">五</td>
-        <td width="65">六</td></tr>
-      <script language="JavaScript"><!--
+          //--></SCRIPT>
+          </SELECT>月</FONT> <FONT id=GZ face=標楷體 color=#ffffff
+          size=4></FONT><BR></TD></TR>
+      <TR align=middle bgColor=#e0e0e0>
+        <TD width=65>日</TD>
+        <TD width=65>一</TD>
+        <TD width=65>二</TD>
+        <TD width=65>三</TD>
+        <TD width=65>四</TD>
+        <TD width=65>五</TD>
+        <TD width=65>六</TD></TR>
+      <SCRIPT language=JavaScript><!--
           var gNum, color1, color2;
 
           // 星期六顏色
@@ -1101,14 +1434,13 @@ if(navVer == 0 || (navName=='IE'&&navVer<4) ) {
              }
              document.write('</tr>')
           }
-          //--></script><tr align="center"><td id="GD0" onmouseover="mOvr(0)" onmouseout="mOut()" class=""><font id="SD0" size="5" face="Arial Black" color="red" title=""></font><br><font id="LD0" size="2" style="font-size:9pt"></font></td><td id="GD1" onmouseover="mOvr(1)" onmouseout="mOut()" class=""><font id="SD1" size="5" face="Arial Black" title=""></font><br><font id="LD1" size="2" style="font-size:9pt"></font></td><td id="GD2" onmouseover="mOvr(2)" onmouseout="mOut()" class=""><font id="SD2" size="5" face="Arial Black" title=""></font><br><font id="LD2" size="2" style="font-size:9pt"></font></td><td id="GD3" onmouseover="mOvr(3)" onmouseout="mOut()" class=""><font id="SD3" size="5" face="Arial Black" title="">1</font><br><font id="LD3" size="2" style="font-size:9pt">初三</font></td><td id="GD4" onmouseover="mOvr(4)" onmouseout="mOut()" class=""><font id="SD4" size="5" face="Arial Black" title="" style="cursor: s-resize;">2</font><br><font id="LD4" size="2" style="font-size:9pt">初四</font></td><td id="GD5" onmouseover="mOvr(5)" onmouseout="mOut()" class=""><font id="SD5" size="5" face="Arial Black" title="">3</font><br><font id="LD5" size="2" style="font-size:9pt"><font color="red">端午節 </font></font></td><td id="GD6" onmouseover="mOvr(6)" onmouseout="mOut()" class=""><font id="SD6" size="5" face="Arial Black" color="red" title="">4</font><br><font id="LD6" size="2" style="font-size:9pt">初六</font></td></tr><tr align="center"><td id="GD7" onmouseover="mOvr(7)" onmouseout="mOut()" class=""><font id="SD7" size="5" face="Arial Black" color="red" title="" style="cursor: s-resize;">5</font><br><font id="LD7" size="2" style="font-size:9pt">初七</font></td><td id="GD8" onmouseover="mOvr(8)" onmouseout="mOut()" class=""><font id="SD8" size="5" face="Arial Black" title="" style="cursor: s-resize;">6</font><br><font id="LD8" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD9" onmouseover="mOvr(9)" onmouseout="mOut()" class=""><font id="SD9" size="5" face="Arial Black" title="" style="cursor: s-resize;">7</font><br><font id="LD9" size="2" style="font-size:9pt">初九</font></td><td id="GD10" onmouseover="mOvr(10)" onmouseout="mOut()" class=""><font id="SD10" size="5" face="Arial Black" title="" style="cursor: s-resize;">8</font><br><font id="LD10" size="2" style="font-size:9pt">初十</font></td><td id="GD11" onmouseover="mOvr(11)" onmouseout="mOut()" class=""><font id="SD11" size="5" face="Arial Black" title="" style="cursor: s-resize;">9</font><br><font id="LD11" size="2" style="font-size:9pt">十一</font></td><td id="GD12" onmouseover="mOvr(12)" onmouseout="mOut()" class=""><font id="SD12" size="5" face="Arial Black" title="" style="cursor: s-resize;">10</font><br><font id="LD12" size="2" style="font-size:9pt">十二</font></td><td id="GD13" onmouseover="mOvr(13)" onmouseout="mOut()" class=""><font id="SD13" size="5" face="Arial Black" color="red" title="" style="cursor: s-resize;">11</font><br><font id="LD13" size="2" style="font-size:9pt"><font color="red">伽藍菩薩…</font></font></td></tr><tr align="center"><td id="GD14" onmouseover="mOvr(14)" onmouseout="mOut()" class=""><font id="SD14" size="5" face="Arial Black" color="red" title="">12</font><br><font id="LD14" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD15" onmouseover="mOvr(15)" onmouseout="mOut()" class=""><font id="SD15" size="5" face="Arial Black" title="">13</font><br><font id="LD15" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD16" onmouseover="mOvr(16)" onmouseout="mOut()" class=""><font id="SD16" size="5" face="Arial Black" title="" style="cursor: s-resize;">14</font><br><font id="LD16" size="2" style="font-size:9pt"><font color="red">天地交泰 </font></font></td><td id="GD17" onmouseover="mOvr(17)" onmouseout="mOut()" class=""><font id="SD17" size="5" face="Arial Black" title="" style="cursor: s-resize;">15</font><br><font id="LD17" size="2" style="font-size:9pt">十七</font></td><td id="GD18" onmouseover="mOvr(18)" onmouseout="mOut()" class=""><font id="SD18" size="5" face="Arial Black" title="" style="cursor: s-resize;">16</font><br><font id="LD18" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD19" onmouseover="mOvr(19)" onmouseout="mOut()" class=""><font id="SD19" size="5" face="Arial Black" title="" style="cursor: s-resize;">17</font><br><font id="LD19" size="2" style="font-size:9pt">十九</font></td><td id="GD20" onmouseover="mOvr(20)" onmouseout="mOut()" class=""><font id="SD20" size="5" face="Arial Black" color="red" title="" style="cursor: s-resize;">18</font><br><font id="LD20" size="2" style="font-size:9pt">二十</font></td></tr><tr align="center"><td id="GD21" onmouseover="mOvr(21)" onmouseout="mOut()" class=""><font id="SD21" size="5" face="Arial Black" color="red" title="">19</font><br><font id="LD21" size="2" style="font-size:9pt">廿一</font></td><td id="GD22" onmouseover="mOvr(22)" onmouseout="mOut()" class=""><font id="SD22" size="5" face="Arial Black" title="">20</font><br><font id="LD22" size="2" style="font-size:9pt">廿二</font></td><td id="GD23" onmouseover="mOvr(23)" onmouseout="mOut()" class=""><font id="SD23" size="5" face="Arial Black" title="">21</font><br><font id="LD23" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD24" onmouseover="mOvr(24)" onmouseout="mOut()" class=""><font id="SD24" size="5" face="Arial Black" title="" style="cursor: s-resize;">22</font><br><font id="LD24" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD25" onmouseover="mOvr(25)" onmouseout="mOut()" class=""><font id="SD25" size="5" face="Arial Black" title="" style="cursor: s-resize;">23</font><br><font id="LD25" size="2" style="font-size:9pt">廿五</font></td><td id="GD26" onmouseover="mOvr(26)" onmouseout="mOut()" class=""><font id="SD26" size="5" face="Arial Black" title="" style="cursor: s-resize;">24</font><br><font id="LD26" size="2" style="font-size:9pt">廿六</font></td><td id="GD27" onmouseover="mOvr(27)" onmouseout="mOut()" class=""><font id="SD27" size="5" face="Arial Black" color="red" title="" style="cursor: s-resize;">25</font><br><font id="LD27" size="2" style="font-size:9pt">廿七</font></td></tr><tr align="center"><td id="GD28" onmouseover="mOvr(28)" onmouseout="mOut()" class=""><font id="SD28" size="5" face="Arial Black" color="red" title="">26</font><br><font id="LD28" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD29" onmouseover="mOvr(29)" onmouseout="mOut()" class=""><font id="SD29" size="5" face="Arial Black" title="">27</font><br><font id="LD29" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD30" onmouseover="mOvr(30)" onmouseout="mOut()" class=""><font id="SD30" size="5" face="Arial Black" title="">28</font><br><font id="LD30" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD31" onmouseover="mOvr(31)" onmouseout="mOut()" class=""><font id="SD31" size="5" face="Arial Black" title="">29</font><br><font id="LD31" size="2" style="font-size:9pt"><font color="red">十齋日 </font></font></td><td id="GD32" onmouseover="mOvr(32)" onmouseout="mOut()" class="todayColor"><font id="SD32" size="5" face="Arial Black" title="">30</font><br><font id="LD32" size="2" style="font-size:9pt">初二</font></td><td id="GD33" onmouseover="mOvr(33)" onmouseout="mOut()" class=""><font id="SD33" size="5" face="Arial Black" title=""></font><br><font id="LD33" size="2" style="font-size:9pt"></font></td><td id="GD34" onmouseover="mOvr(34)" onmouseout="mOut()" class=""><font id="SD34" size="5" face="Arial Black" color="red" title=""></font><br><font id="LD34" size="2" style="font-size:9pt"></font></td></tr><tr align="center"><td id="GD35" onmouseover="mOvr(35)" onmouseout="mOut()" class=""><font id="SD35" size="5" face="Arial Black" color="red" title=""></font><br><font id="LD35" size="2" style="font-size:9pt"></font></td><td id="GD36" onmouseover="mOvr(36)" onmouseout="mOut()" class=""><font id="SD36" size="5" face="Arial Black" title=""></font><br><font id="LD36" size="2" style="font-size:9pt"></font></td><td id="GD37" onmouseover="mOvr(37)" onmouseout="mOut()" class=""><font id="SD37" size="5" face="Arial Black" title=""></font><br><font id="LD37" size="2" style="font-size:9pt"></font></td><td id="GD38" onmouseover="mOvr(38)" onmouseout="mOut()" class=""><font id="SD38" size="5" face="Arial Black" title=""></font><br><font id="LD38" size="2" style="font-size:9pt"></font></td><td id="GD39" onmouseover="mOvr(39)" onmouseout="mOut()" class=""><font id="SD39" size="5" face="Arial Black" title=""></font><br><font id="LD39" size="2" style="font-size:9pt"></font></td><td id="GD40" onmouseover="mOvr(40)" onmouseout="mOut()" class=""><font id="SD40" size="5" face="Arial Black" title=""></font><br><font id="LD40" size="2" style="font-size:9pt"></font></td><td id="GD41" onmouseover="mOvr(41)" onmouseout="mOut()" class=""><font id="SD41" size="5" face="Arial Black" color="red" title=""></font><br><font id="LD41" size="2" style="font-size:9pt"></font></td></tr>
-      </tbody></table></td>
-  <td valign="top" align="middle" width="40"><br><br><br>年<br>
-<button style="FONT-SIZE: 9pt" onclick="pushBtm(&#39;YD&#39;)">▲</button><br>
-<button style="FONT-SIZE: 9pt" onclick="pushBtm(&#39;YU&#39;)">▼</button>
-<p>月<br>
-<button style="FONT-SIZE: 9pt" onclick="pushBtm(&#39;MD&#39;)">▲</button><br>
-<button style="FONT-SIZE: 9pt" onclick="pushBtm(&#39;MU&#39;)">▼</button></p><p>
-<button style="FONT-SIZE: 9pt" onclick="pushBtm(&#39;&#39;)">今<br>日</button></p><p>
-</p></td></tr></tbody></table></center>
-</body></html>
+          //--></SCRIPT>
+      </TBODY></TABLE></TD>
+  <TD vAlign=top align=middle width=40><BR><BR><BR>年<BR>
+<BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('YD')">▲</BUTTON><BR>
+<BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('YU')">▼</BUTTON>
+<P>月<BR>
+<BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('MD')">▲</BUTTON><BR>
+<BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('MU')">▼</BUTTON><P>
+<BUTTON style="FONT-SIZE: 9pt" onclick="pushBtm('')">今<BR>日</BUTTON><P>
+</TD></FORM></TR></TBODY></TABLE></CENTER></BODY></HTML>
