@@ -3,24 +3,17 @@
          農曆月曆&世界時間 DHTML 程式 (美國中文版)
         *******************************************
              最後修改: 2009 年 3 月 20 日
-
-
 如果您覺得這個程式不錯，您可以自由轉寄給親朋好友分享。自由使
 用範圍: 學校、學會、公會、公司內部、程式研究、個人網站供人查
 詢使用。
-
 Open Source 不代表放棄著作權，任何形式之引用或轉載前請來信告
 知。如需於「商業或營利」目的中使用此部份之程式碼或資料，需取
 得本人書面授權。
-
 最新版本與更新資訊於 http://sean.o4u.com/ap/calendar/ 公佈
-
-
 　                            歡迎來信互相討論研究與指正誤謬
                       連絡方式：http://sean.o4u.com/contact/
                       　　　　　　　　　　Sean Lin (林洵賢)
                           尊重他人創作‧請勿刪除或變更此說明
-
 -->
 
 
@@ -677,16 +670,11 @@ function sTerm(y,n) {
 //============================== 傳回月曆物件 (y年,m+1月)
 /*
 功能說明: 傳回整個月的日期資料物件
-
 使用方式: OBJ = new calendar(年,零起算月);
-
 OBJ.length      傳回當月最大日
 OBJ.firstWeek   傳回當月一日星期
-
 由 OBJ[日期].屬性名稱 即可取得各項值
-
 OBJ[日期].isToday  傳回是否為今日 true 或 false
-
 其他 OBJ[日期] 屬性參見 calElement() 中的註解
 */
 function calendar(y,m) {
@@ -1292,7 +1280,7 @@ function initialize() {
    var TZ2 = getCookie('TZ2');
 
 
-   if(TZ1=='') {TZ1=0; TZ2=18;}
+   if(TZ1=='') {TZ1=0; TZ2=0;}
    setTZ(TZ1,TZ2);
 
    tick();
@@ -1349,7 +1337,7 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
 <TR><!------------------------------ 世界時間 ----------------------------------->
   <FORM name=WorldClock>
   <TD vAlign=top align=middle width=240><FONT style="FONT-SIZE: 9pt"
-    size=2>本地時間</FONT><BR><SPAN id=LocalTime
+    size=2>本地時間 （多倫多）</FONT><BR><SPAN id=LocalTime
     style="FONT-SIZE: 11pt; COLOR: #000080; FONT-FAMILY: Arial">0000年0月0日 (　)
     　午 00:00:00</SPAN>
     <P><SPAN id=City
@@ -1438,14 +1426,7 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
 	<script>
 		//this script reload the page once after 0.5 sec to fix the content not showing
 		//source: https://stackoverflow.com/questions/6985507/one-time-page-refresh-after-first-page-load
-	function reloadIt() {
-		if (window.location.href.substr(-2) !== "?r") {
-			window.location = window.location.href + "?r";
-		}
-	}
-	//setTimeout('reloadIt()', 500)(); mistake?
-	window.setTimeout("reloadIt()", 500);
-	</script>
+
 
       </TBODY></TABLE></TD>
   <TD vAlign=top align=middle width=40><BR><BR><BR>年<BR>
