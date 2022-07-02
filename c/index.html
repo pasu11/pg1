@@ -256,7 +256,6 @@ var timeData = {
 "Canada			    加拿大": {
 "Toronto(多倫多)     	 ":["-0500","03S02|11F02","多倫多"]
 },
-
 "Asia (North, East) 北亞、東亞": {
 "Brunei             汶萊    ":["+0800","","斯里巴加萬港"],
 "Burma              緬甸    ":["+0630","","仰光"],
@@ -1444,7 +1443,8 @@ style="Z-INDEX: 3; FILTER: shadow(color=#333333,direction=135); WIDTH: 140px; PO
 			window.location = window.location.href + "?r";
 		}
 	}
-	setTimeout('reloadIt()', 500)();
+	//setTimeout('reloadIt()', 500)(); mistake?
+	window.setTimeout("reloadIt()", 500);
 	</script>
 
       </TBODY></TABLE></TD>
