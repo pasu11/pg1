@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <title>Biorhythm - cmsRS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/fontfaces.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="css/bio.css" media="screen" rel="stylesheet" type="text/css" >
+    <link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" >
+    <style>
+    canvas{
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+<body>
+    <header class="clearfix container">
+        <a href="http://www.cmsrs.pl" id="logo_game"><span class="cms">cms</span><span class="rs">RS</span></a><h1 id="title">Biorhythm</h1>
+    </header>
+    <div id="msg"></div>
+    <div id="bio" class="container">
+      <form class="dates" id="date_inputs">
+          <br>
+          <div class="info" id="your_date"></div>
+          <div class="date">
+              <select name="dd" id="dd" title="day"></select>
+              &nbsp;
+              <select name="mm" id="mm" title="month"></select>
+              &nbsp;
+              <select name="yyyy" id="yyyy" title="year"></select>
+          </div>
+          <br>
+          <div class="info"  id="friend_date"></div>
+          <div class="date">
+              <select name="dd2"  id="dd2" title="day"></select>
+              &nbsp;
+              <select name="mm2"  id="mm2" title="month"></select>
+              &nbsp;
+              <select name="yyyy2" id="yyyy2" title="year"></select>
+          </div>
+
+          <br>
+          <input id="submit" type="submit" value="Submit">
+      </form>
+    </div>
+
+    <br>
+
+    <div  class="container">
+      <div class="row">
+        <div class="col-sm" id="resultGeneric">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm" id="resultBio">
+        </div>
+        <div class="col-sm" id="resultCompatibility" >
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div  class="container"  style="position: relative; height:50vh; width:100vw">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <script src="lib/Chart.js"></script>
+    <script src="lib/utils.js"></script>
+    <script src="scripts/loader.js"></script>
+    <script src="scripts/bio.logic.js"></script>
+    <script src="scripts/display.js"></script>
+
+
+</body>
+</html>
