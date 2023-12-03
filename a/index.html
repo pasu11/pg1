@@ -1,191 +1,69 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title>CalcTool: Height of a building calculator</title>
-	<meta name="generator" content="LibreOffice 7.2.6.2 (Linux)"/>
-	<meta name="created" content="00:00:00"/>
-	<meta name="changed" content="2022-04-21T12:26:37.440841744"/>
-	<meta name="description" content="Trigonometry online calculation: Height of a building - Or a mountain, tree, tower, etc."/>
-	<style type="text/css">
-		@page { size: 21.59cm 27.94cm; margin-left: 2cm; margin-right: 1cm; margin-top: 1cm; margin-bottom: 1cm }
-		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
-		td p { orphans: 0; widows: 0; background: transparent }
-		a:link { color: #000080; so-language: zxx; text-decoration: underline }
-		a:visited { color: #800000; so-language: zxx; text-decoration: underline }
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angle Elevation Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, button {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-<body lang="en-CA" link="#000080" vlink="#800000" dir="ltr">
-<form name="calculator" action="../untitled%20folder" onsubmit="return calculate()">
-	<center>
-		<table width="703" cellpadding="0" cellspacing="0" style="page-break-before: always">
-			<col width="703"/>
+<body>
 
-			<tr>
-				<td width="703" bgcolor="#ffffff" style="background: #ffffff; border: none; padding: 0cm"><p align="center">
-					Angle Finder (calculate the difference when square is not
-					accurate.)</p>
-				</td>
-			</tr>
-			<tr>
+    <h2>Angle Elevation Calculator</h2>
+    
+    			<tr>
 				<td width="703" bgcolor="#ffffff" style="background: #ffffff; border: none; padding: 0cm"><p>
-					<img src="https://www.calctool.org/CALC/math/trigonometry/height.png" name="Image21" alt="Height of a building diagram" align="bottom" width="300" height="225" border="0"/>
+					<img src="./angle.jpg" name="Image21" alt="Height of a building diagram" align="bottom" width="300" height="225" border="0"/>
 </p>
 				</td>
 			</tr>
-			<tr>
-				<td width="703" style="border: none; padding: 0cm"><p><br/>
 
-					</p>
-				</td>
-			</tr>
-			<tr>
-				<td width="703" style="border: none; padding: 0cm"><p><br/>
+    <label for="angleInput">Angle of Elevation (°):</label>
+    <input type="text" id="angleInput" placeholder="Enter angle of elevation" required>
 
-					</p>
-				</td>
-			</tr>
-			<tr>
-				<td width="703" valign="top" bgcolor="#ffffff" style="background: #ffffff; border: none; padding: 0cm">
-					<table width="317" cellpadding="0" cellspacing="0">
-						<col width="53"/>
+    <label for="distanceInput">Distance to Object (mm):</label>
+    <input type="text" id="distanceInput" placeholder="Enter distance" required>
 
-						<col width="122"/>
+    <button onclick="calculateHeight()">Calculate</button>
 
-						<col width="142"/>
+    <label for="result">Result (Height in mm):</label>
+    <input type="text" id="result" readonly>
 
-						<tr>
-							<td width="53" style="border: none; padding: 0cm"><p><font size="2" style="font-size: 10pt"><i>Angle
-								of elevation</i></font></p>
-							</td>
-							<td width="122" style="border: none; padding: 0cm"><p><input type="text" name="ia" value="0"  size="10" style="width: 2.19cm; height: 0.66cm" onblur="calculate();"></p>
-							</td>
-							<td width="142" style="border: none; padding: 0cm"><p><select name="uia"  style="width: 3.18cm; height: 0.92cm" onchange="calculate();">
-									<option value="1:1:0" selected>degrees (°)
-									<option value="17.4532925199433:1:0">milliradians
-									<option value="0.0174532925199433:1:0">radians
-									<option value="1.11111111111111:1:0">grad
-									<option value="60:1:0">arcseconds
-									<option value="3600:1:0">arcminutes
-									<option value="0.00277777777777778:1:0">circles</option>
-								</select></p>
-							</td>
-						</tr>
-						<tr>
-							<td width="53" style="border: none; padding: 0cm"><p><font size="2" style="font-size: 10pt"><i>Distance
-								to object</i></font></p>
-							</td>
-							<td width="122" style="border: none; padding: 0cm"><p><input type="text" name="id" value="0"  size="10" style="width: 2.19cm; height: 0.66cm" onblur="calculate();"></p>
-							</td>
-							<td width="142" style="border: none; padding: 0cm"><p><select name="uid"  style="width: 3.56cm; height: 0.92cm" onchange="calculate();">
-									<option value="1:1:0" selected>mm
-									<option value="0:1:0">--- METRIC ---
-									<option value="1000000000000:1:0">pm
-									<option value="1000000000:1:0">nm
-									<option value="1000000:1:0">microns (µm)
-									<option value="1000:1:0">mm
-									<option value="100:1:0">cm
-									<option value="0.001:1:0">km
-									<option value="0:1:0">-- IMPERIAL --
-									<option value="39370.07874:1:0">mil
-									<option value="629.9212598:1:0">1/16 inch
-									<option value="39.370078740157:1:0">inches
-									<option value="3.280839895:1:0">feet
-									<option value="1.093613298:1:0">yards
-									<option value="0.000621371192:1:0">miles
-									<option value="0:1:0">- SCIENTIFIC -
-									<option value="6.187153983e+34:1:0">Planck
-									<option value="18897268778:1:0">Bohrs
-									<option value="10000000000:1:0">Angstrom
-									<option value="3.33569906e-09:1:0">light-seconds
-									<option value="1.057000834e-16:1:0">light-years
-									<option value="6.684587123e-12:1:0">au
-									<option value="3.240755744e-17:1:0">parsecs
-									<option value="0:1:0">--- OTHER ---
-									<option value="2834.654669:1:0">points
-									<option value="2.187226597:1:0">cubits
-									<option value="0.546806649:1:0">fathoms
-									<option value="0.198838782:1:0">rods
-									<option value="0.049709695:1:0">chains
-									<option value="0.009090909091:1:0">football fields
-									<option value="0.00497097:1:0">furlongs
-									<option value="0.0006756756757:1:0">Roman miles
-									<option value="0.000539956803:1:0">nautical miles
-									<option value="0.000207123731:1:0">leagues</option>
-								</select></p>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="3" width="317" style="border: none; padding: 0cm">
-								<hr/>
+    <script>
+        function calculateHeight() {
+            // Get user inputs
+            var angle = parseFloat(document.getElementById('angleInput').value);
+            var distance = parseFloat(document.getElementById('distanceInput').value);
 
-							</td>
-						</tr>
-						<tr>
-							<td width="53" style="border: none; padding: 0cm"><p><font size="2" style="font-size: 10pt"><i>Object
-								height is</i></font></p>
-							</td>
-							<td width="122" style="border: none; padding: 0cm"><p><input type="text" name="oh" value="Wait"  size="10" style="width: 2.19cm; height: 0.66cm"></p>
-							</td>
-							<td width="142" style="border: none; padding: 0cm"><p><select name="uoh"  style="width: 3.56cm; height: 0.92cm" onchange="calculate();">
-									<option value="1:1:0" selected>mm
-									<option value="0:1:0">--- METRIC ---
-									<option value="1000000000000:1:0">pm
-									<option value="1000000000:1:0">nm
-									<option value="1000000:1:0">microns (µm)
-									<option value="1000:1:0">mm
-									<option value="100:1:0">cm
-									<option value="0.001:1:0">km
-									<option value="0:1:0">-- IMPERIAL --
-									<option value="39370.07874:1:0">mil
-									<option value="629.9212598:1:0">1/16 inch
-									<option value="39.370078740157:1:0">inches
-									<option value="3.280839895:1:0">feet
-									<option value="1.093613298:1:0">yards
-									<option value="0.000621371192:1:0">miles
-									<option value="0:1:0">- SCIENTIFIC -
-									<option value="6.187153983e+34:1:0">Planck
-									<option value="18897268778:1:0">Bohrs
-									<option value="10000000000:1:0">Angstrom
-									<option value="3.33569906e-09:1:0">light-seconds
-									<option value="1.057000834e-16:1:0">light-years
-									<option value="6.684587123e-12:1:0">au
-									<option value="3.240755744e-17:1:0">parsecs
-									<option value="0:1:0">--- OTHER ---
-									<option value="2834.654669:1:0">points
-									<option value="2.187226597:1:0">cubits
-									<option value="0.546806649:1:0">fathoms
-									<option value="0.198838782:1:0">rods
-									<option value="0.049709695:1:0">chains
-									<option value="0.009090909091:1:0">football fields
-									<option value="0.00497097:1:0">furlongs
-									<option value="0.0006756756757:1:0">Roman miles
-									<option value="0.000539956803:1:0">nautical miles
-									<option value="0.000207123731:1:0">leagues</option>
-								</select></p>
-							</td>
-						</tr>
-						<tr>
-							<td width="53" style="border: none; padding: 0cm"></td>
-							<td width="122" style="border: none; padding: 0cm"><p><input type="button" name="go" value="Calculate!"  style="width: 3.07cm; height: 1.27cm" onclick="return calculate()"></p>
-							</td>
-							<td width="142" valign="bottom" style="border: none; padding: 0cm"><p>
-								<br/>
+            // Check if inputs are valid
+            if (isNaN(angle) || isNaN(distance)) {
+                alert('Please enter valid numeric values for both angle and distance.');
+                return;
+            }
 
-								</p>
-							</td>
-						</tr>
-					</table>
-					<hr/>
+            // Convert angle to radians
+            var angleInRadians = angle * (Math.PI / 180);
 
-				</td>
-			</tr>
-		</table>
-	</center>
-</form>
-<p align="center" style="margin-bottom: 0cm"> <br/>
-<a href="https://www.calctool.org/CALC/math/trigonometry/height">©
-Andy &amp; Steve Shipway 2008<br/>
-Under new management</a></p>
+            // Calculate height using trigonometry
+            var height = Math.tan(angleInRadians) * distance;
+
+            // Display the result
+            document.getElementById('result').value = height.toFixed(2) + ' mm';
+        }
+    </script>
+
+<br><br><br>
+This webpage is mostly generated by ChatGPT. Thanks ChatGPT!
 </body>
 </html>
