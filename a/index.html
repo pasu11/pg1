@@ -16,6 +16,22 @@
         input, button {
             margin-bottom: 10px;
         }
+  
+  .textboxcolorangle{
+	   font-weight: bold;
+	color:  #fc2a28;
+  }      
+  
+   .textboxcolordistance{
+	    font-weight: bold;
+	color:  #3743ff;
+  }    
+  
+   .textboxcolorheight{
+	    font-weight: bold;
+	color:  #1cb800;
+  }    
+  
  #result {
             font-weight: bold;
         }
@@ -53,16 +69,16 @@
 </p>
 				</td>
 			</tr>
-
-    <label for="angle">Angle of Elevation (°):</label>
-    <input type="number" id="angle" placeholder="angle" >°
+<div class="textboxcolorangle">
+    <label for="angle">Angle of Elevation (°):    <input type="number" id="angle" placeholder="angle  (°)" >°</label>
+    </div>
     
-    <label for="distance">Distance/Length:</label>
-    <input type="number" id="distance" placeholder="distance/length"> units
-    
-    
-    <label for="height">Difference:</label>
-    <input type="number" id="height"  placeholder="difference"> units
+ <div class="textboxcolordistance">
+    <label for="distance">Distance/Length (unit) :   <input type="number" id="distance" placeholder="distance/length (unit)"> </label>
+    </div>
+    <div class="textboxcolorheight">
+    <label for="height">Difference/Height (unit):    <input type="number" id="height"  placeholder="difference/height (unit)"> </label>
+    </div>
 
     <button onclick="startCalculate()">Calculate</button>
     <button onclick="resetall()">Reset</button>
