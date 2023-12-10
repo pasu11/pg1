@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry Calculator</title>
+</head>
+<body>
+    <label for="distance">Distance:</label>
+    <input type="text" id="distance" placeholder="Enter distance">
+
+    <label for="height">Height:</label>
+    <input type="number" id="height" placeholder="Enter height">
+
+    <label for="angle">Angle of Elevation:</label>
+    <input type="number" id="angle" placeholder="Enter angle">
+
+    <button onclick="startCalculate()">Calculate</button>
+
+    <p>Result: <span id="result"></span></p>
+
+    <script>
+        function startCalculate() {
+            let distance = document.getElementById("distance").value;
+            let height = document.getElementById("height").value;
+            let angle = document.getElementById("angle").value;
+
+            if (distance !== "" && height !== "" && angle !== "") {
+                alert("Please provide only two values.");
+                return;
+            }
+
+            if (distance !== "" && height !== "") {
+                // Angle is missing
+                calculateAngleOfElevation();
+            } else if (distance !== "" && angle !== "") {
+                // Height is missing
+                calculateHeight();
+            } else if (height !== "" && angle !== "") {
+                // Distance is missing
+                calculateDistance();
+            } else {
+                alert("Please provide at least two values.");
+            }
+        }
+
+        function calculateAngleOfElevation() {
+            let distance = document.getElementById("distance").value;
+            let height = document.getElementById("height").value;
+
+            // Convert to radians because Math.atan takes radians
+            let angleOfElevation = Math.atan(height / distance) * (180 / Math.PI);
+
+            // Display result
+            document.getElementById("result").innerText = `Angle of Elevation: ${angleOfElevation.toFixed(2)} degrees`;
+        }
+
+        function calculateDistance() {
+            let angle = document.getElementById("angle").value;
+            let height = document.getElementById("height").value;
+
+            // Convert to radians because Math.tan takes radians
+            let angleInRadians = angle * (Math.PI / 180);
+            let distance = height / Math.tan(angleInRadians);
+
+            // Display result
+            document.getElementById("result").innerText = `Distance: ${distance.toFixed(2)} units`;
+        }
+
+        function calculateHeight() {
+            let angle = document.getElementById("angle").value;
+            let distance = document.getElementById("distance").value;
+
+            // Convert to radians because Math.tan takes radians
+            let angleInRadians = angle * (Math.PI / 180);
+            let height = distance * Math.tan(angleInRadians);
+
+            // Display result
+            document.getElementById("result").innerText = `Height: ${height.toFixed(2)} units`;
+        }
+    </script>
+</body>
+</html>

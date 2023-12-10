@@ -16,6 +16,31 @@
         input, button {
             margin-bottom: 10px;
         }
+ #result {
+            font-weight: bold;
+        }
+
+        .angle-result {
+			font-family:Sans-serif;
+			font-size:33px;
+			font-weight: bold;
+            color: #fc2a28;
+        }
+
+        .distance-result {
+			font-family:Sans-serif;
+			font-size:33px;
+			font-weight: bold;
+            color: #3743ff;
+        }
+
+        .height-result {
+			font-family:Sans-serif;
+			font-size:33px;
+			font-weight: bold;
+            color: #1cb800;
+        }
+        }
     </style>
 </head>
 <body>
@@ -29,41 +54,115 @@
 				</td>
 			</tr>
 
-    <label for="angleInput">Angle of Elevation (°):</label>
-    <input type="text" id="angleInput" placeholder="angle (°)" required>
+    <label for="angle">Angle of Elevation (°):</label>
+    <input type="number" id="angle" placeholder="angle" >°
     
-    <label for="distanceInput">Distance/Length(mm):</label>
-    <input type="text" id="distanceInput" placeholder="distance/length (mm)" required>
+    <label for="distance">Distance/Length:</label>
+    <input type="number" id="distance" placeholder="distance/length"> units
+    
+    
+    <label for="height">Difference:</label>
+    <input type="number" id="height"  placeholder="difference"> units
 
-    <button onclick="calculateHeight()">Calculate</button>
+    <button onclick="startCalculate()">Calculate</button>
+    <button onclick="resetall()">Reset</button>
 
-    <label for="result">Result (Height in mm):</label>
-    <input type="text" id="result" readonly>
+    <p>  <span id="result"></span></p>
+
 
     <script>
-        function calculateHeight() {
-            // Get user inputs
-            var angle = parseFloat(document.getElementById('angleInput').value);
-            var distance = parseFloat(document.getElementById('distanceInput').value);
+ 
 
-            // Check if inputs are valid
-            if (isNaN(angle) || isNaN(distance)) {
-                alert('Please enter valid numeric values for both angle and distance.');
+function resetall(){
+			document.getElementById('angle').value = "";
+			document.getElementById('distance').value = "";
+			document.getElementById('height').value = "";
+			}
+	
+function startCalculate() {
+            let distance = document.getElementById("distance").value;
+            let height = document.getElementById("height").value;
+            let angle = document.getElementById("angle").value;
+
+            if (distance !== "" && height !== "" && angle !== "") {
+                alert("Please provide only two values.");
                 return;
             }
 
-            // Convert angle to radians
-            var angleInRadians = angle * (Math.PI / 180);
-
-            // Calculate height using trigonometry
-            var height = Math.tan(angleInRadians) * distance;
-
-            // Display the result
-            document.getElementById('result').value = height.toFixed(2) + ' mm';
+            if (distance !== "" && height !== "") {
+                // Angle is missing
+                calculateAngleOfElevation();
+            } else if (distance !== "" && angle !== "") {
+                // Height is missing
+                calculateHeight();
+            } else if (height !== "" && angle !== "") {
+                // Distance is missing
+                calculateDistance();
+            } else {
+                alert("Please provide at least two values.");
+            }
         }
+
+        function calculateAngleOfElevation() {
+            let distance = document.getElementById("distance").value;
+            let height = document.getElementById("height").value;
+
+            // Convert to radians because Math.atan takes radians
+            let angleOfElevation = Math.atan(height / distance) * (180 / Math.PI);
+
+            // Display result Angle
+            document.getElementById("angle").value = angleOfElevation.toFixed(2);
+            displayResultangle(angleOfElevation, 'angle-result');
+        }
+
+        function calculateDistance() {
+            let angle = document.getElementById("angle").value;
+            let height = document.getElementById("height").value;
+
+            // Convert to radians because Math.tan takes radians
+            let angleInRadians = angle * (Math.PI / 180);
+            let distance = height / Math.tan(angleInRadians);
+
+            // Display result distance
+            document.getElementById("distance").value = distance.toFixed(2);
+            displayResultdistance(distance, 'distance-result');
+        }
+
+        function calculateHeight() {
+            let angle = document.getElementById("angle").value;
+            let distance = document.getElementById("distance").value;
+
+            // Convert to radians because Math.tan takes radians
+            let angleInRadians = angle * (Math.PI / 180);
+            let height = distance * Math.tan(angleInRadians);
+
+            // Display result Height/Difference
+            document.getElementById("height").value = height.toFixed(2);
+            displayResultheight(height, 'height-result');
+        }
+        
+        function displayResultheight(value, resultClass) {
+            // Set the class dynamically based on the function
+            document.getElementById("result").className = resultClass;
+            document.getElementById("result").innerText = `Height: ${value.toFixed(2)} units`;
+        }
+        
+         function displayResultdistance(value, resultClass) {
+            // Set the class dynamically based on the function
+            document.getElementById("result").className = resultClass;
+            document.getElementById("result").innerText = `Distance/Length: ${value.toFixed(2)} units` ;
+
+        }       
+        
+        function displayResultangle(value, resultClass) {
+            // Set the class dynamically based on the function
+            document.getElementById("result").className = resultClass;
+            document.getElementById("result").innerText = `Angle of Elevation: ${value.toFixed(2)} °`;
+        }
+
     </script>
 
 <br><br><br>
-ChatGPT generated most of the codes of this page.
+Thank you ChatGPT for generating most of the code on this page. :)
 </body>
 </html>
