@@ -127,7 +127,7 @@ function startCalculate() {
             let angleOfElevation = Math.atan(height / distance) * (180 / Math.PI);
 
             // Display result Angle
-            document.getElementById("angle").value = angleOfElevation.toFixed(2);
+            document.getElementById("angle").value = angleOfElevation.toFixed(4);
             displayResultangle(angleOfElevation, 'angle-result');
         }
 
@@ -140,7 +140,7 @@ function startCalculate() {
             let distance = height / Math.tan(angleInRadians);
 
             // Display result distance
-            document.getElementById("distance").value = distance.toFixed(2);
+            document.getElementById("distance").value = distance.toFixed(4);
             displayResultdistance(distance, 'distance-result');
         }
 
@@ -153,7 +153,7 @@ function startCalculate() {
             let height = distance * Math.tan(angleInRadians);
 
             // Display result Height/Difference
-            document.getElementById("height").value = height.toFixed(2);
+            document.getElementById("height").value = height.toFixed(4);
             displayResultheight(height, 'height-result');
         }
         
