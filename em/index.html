@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>耳鸣法 javascript</title>
+ <style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #000000; /* Set your desired background color */
+    }
+
+    table {
+        width: 600px; /* Set your desired width */
+        border-collapse: collapse;
+		align: left;
+		//cellpadding: 8;
+    }
+
+    td {
+        border: 1px solid #ddd; /* Set your desired border color */
+        padding: 8px;
+        text-align: center;
+    }
+
+    /* Optional: Style for the text */
+    #textOne {
+        font-size: 25px;
+		font-weight: bold;
+        color: #ffffff; /* Set your desired text color */
+    }
+
+    /* Optional: Style for the variable */
+    #variable1 {
+        font-size: 24px;
+        //font-weight: bold;
+        color: #ffffff; /* Set your desired variable color */
+    }
+
+.footer { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+	font-size: 20px;
+	color: #555555; /* Set your desired text color */
+}
+</style>
+
+</head>
+
+<body>
+<div>
+    <table>
+        <tr>
+            <td id="textOne">耳鸣法</td>
+        </tr>
+        <tr>
+            <td id="variable1"></td>
+        </tr>
+    </table>
+<br><br><br><br><br><br>
+
+</div>
+
+
+<script>
+const dd = new Date();
+
+let hour = dd.getHours();
+
+// 耳鸣法表
+let a = ["子时：(23:00-01:00) 左主女思，<span style='color: red;'>右主失财。</span>", /* ... */];
+let b = ["丑时：(01:00-03:00)<span style='color: red;'> 左主口舌，右主手讼。</span>", /* ... */];
+let c = ["寅时：(03:00-05:00)<span style='color: red;'> 左主失财，右主心急。 <span>",/* ... */];
+let d = ["卯时：(05:00-07:00) 左主饮食，右主客至。", /* ... */];
+let e = ["辰时：(07:00-09:00) 左主远行，右主客至。", /* ... */];
+let f = ["巳时：(09:00-11:00)<span style='color: red;'> 左主凶事</span>，<span style='color: blue;'>右主大吉。</span>", /* ... */];
+let g = ["午时：(11:00-13:00) 左主远信，右有亲来。", /* ... */];
+let h = ["未时：(13:00-15:00) 左主饮食，右远人来。", /* ... */];
+let i = ["申时：(15:00-17:00) 左主行人，<span style='color: blue;'>右主喜事。</span>", /* ... */];
+let j = ["酉时：(17:00-19:00)<span style='color: red;'> 左主失财</span>，<span style='color: blue;'>右主大吉。</span>", /* ... */];
+let k = ["戌时：(19:00-21:00) 左主饮食，右主客至。", /* ... */];
+let l = ["亥时：(21:00-23:00)<span style='color: blue;'> 左主大吉</span>，右主饮食。", /* ... */];
+
+let result;
+
+// Compare with each variable and copy the matching one to "result"
+if (hour == 23 || hour == 0) {
+    result = a.slice(); // Copy the array
+} else if (hour == 1 || hour == 2) {
+    result = b.slice();
+} else if (hour == 3 || hour == 4) {
+    result = c.slice();
+} else if (hour == 5 || hour == 6) {
+    result = d.slice();
+} else if (hour == 7 || hour == 8) {
+    result = e.slice();
+} else if (hour == 9 || hour == 10) {
+    result = f.slice();
+} else if (hour == 11 || hour == 12) {
+    result = g.slice();
+} else if (hour == 13 || hour == 14) {
+    result = h.slice();
+} else if (hour == 15 || hour == 16) {
+    result = i.slice();
+} else if (hour == 17 || hour == 18) {
+    result = j.slice();
+} else if (hour == 20 || hour == 21) {
+    result = k.slice();
+} else if (hour == 22 || hour == 23) {
+    result = l.slice();
+} else {
+    result = "Invalid hour. Please provide a number within the valid range.";
+}
+
+document.getElementById("variable1").innerHTML =  result.join('<br>');
+</script>
+
+
+<div class="footer">Thanks ChatGPT for helping to create this page :D </div>
+
+
+</body>
+
+</html>
+
