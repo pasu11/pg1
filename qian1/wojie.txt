@@ -1,0 +1,6 @@
+<td>
+<p class="MsoBodyTextIndent">我解</p>
+</td>
+<td style="border-width: medium 1.5pt 1.5pt medium; border-style: none double double none; border-color: -moz-use-text-color windowtext windowtext -moz-use-text-color; padding: 0cm 5.65pt 0cm 1.4pt; width: 390.75pt;" colspan="3" valign="top" width="521">
+<p class="MsoBodyText">现在最好不要冲动行事，先冷静下来，什么都不要做。越急着主动，越会犯错。</p>
+</td></tr></td>
