@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.9, maximum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RPM Visualizer</title>
+    <style>
+      @keyframes wheel {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      body {
+        text-align: center;
+      }
+      #app {
+        text-align: center;
+        width: 100%;
+      }
+      #rpm {
+        width: 50%;
+        height: 100px;
+        font-size: 50px;
+        text-align: center;
+        outline: none;
+        border: none;
+      }
+      img {
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: wheel;
+        animation-duration: 2s;
+      }
+    </style>
+  </head>
+  <script>
+    window.onload = function() {
+      var input = document.getElementById('rpm');
+      var wheel = document.querySelector('img');
+
+      input.addEventListener('input', oninput, false);
+      function oninput() {
+        var rpm = input.value;
+        var duration = 60 / rpm;
+        wheel.style.animationDuration = duration + 's';
+      }
+    };
+  </script>
+  <body>
+    <div id="app">
+      <p style="text-align: center">
+        <input type="number" name="rpm" id="rpm" placeholder="" autofocus/> 
+      </p>
+     <br>
+ <br>
+  <br>
+   <br>
+    <br>
+      <img
+        src=line.jpg style="align:center"
+      />
+    </div>
+    <p style="position: fixed; bottom: 0; width:100%; text-align: center"> Scripts were original created by Barnabas Nomo Kowus @ https://github.com/Kowus/rpmVisualizer and I did a little modify for personal use (buying small gearbox motor). Thanks.
+  </body>
+</html>
+
