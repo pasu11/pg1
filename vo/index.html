@@ -1,0 +1,57 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Electric Output Calculation</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <h1>Electric Output Calculation:</h1>  
+    <div class="container">  
+        <div class="calculator1" id="calc1">  
+            <h2>Voltage & Amp to Watt</h2>  
+            <label for="voltage1">Vols:</label>  
+            <input type="number" id="voltage1" oninput="calculateWatt()">  
+            <br><br>
+            <label for="amp1">Amp:</label>  
+            <input type="number" id="amp1" oninput="calculateWatt()">  
+            <br><br>
+            <label for="watt1" class="bold-label">Watt:</label>  
+            <input type="number" id="watt1" disabled>  
+            <br><br>  
+			<button onclick="resetInputs1()">Reset</button>  <!-- Reset button -->
+        </div>  
+
+        <div class="calculator2" id="calc2">  
+            <h2>Amp & Watt to Voltage</h2>  
+            <label for="amp2">Amp:</label>  
+            <input type="number" id="amp2" oninput="calculateVoltage()">  
+            <br><br>
+            <label for="watt2">Watt:</label>  
+            <input type="number" id="watt2" oninput="calculateVoltage()">  
+            <br><br>
+            <label for="voltage2" class="bold-label">Volts:</label>  
+            <input type="number" id="voltage2" disabled>  
+            <br><br>  
+			<button onclick="resetInputs2()">Reset</button>  <!-- Reset button -->
+        </div>  
+
+        <div class="calculator3" id="calc3">  
+            <h2>Voltage & Watt to Amp</h2>  
+            <label for="voltage3">Volts:</label>  
+            <input type="number" id="voltage3" oninput="calculateAmp()">  
+            <br><br>
+            <label for="watt3">Watt:</label>  
+            <input type="number" id="watt3" oninput="calculateAmp()">  
+            <br><br>
+            <label for="amp3" class="bold-label">Amp:</label>  
+            <input type="number" id="amp3" disabled>  
+            <br><br>  
+			<button onclick="resetInputs3()">Reset</button>  <!-- Reset button -->
+        </div>  
+    </div>  
+    
+    <script src="script.js"></script>  
+</body>  
+</html>  

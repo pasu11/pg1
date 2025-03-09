@@ -1,0 +1,60 @@
+body {  
+    font-family: Arial, sans-serif;  
+    /*background-color: #f4f4f4;  */
+	background-image: url('back.jpg');
+	background-repeat:no-repeat;
+	/*background-size:cover;*/
+    padding: 20px;  
+}  
+
+.container {  
+    display: flex;  
+    justify-content: space-between;  
+    gap: 20px;  
+	background-color: #3465A4; /* Light blue */ 
+	/*background-image: url('back.jpg');*/
+    padding: 20px;  /* Optional: add some padding */  
+    border-radius: 10px; /* Optional: rounded corners */ 
+
+
+}  
+
+.calculator1 {  
+    background: #fff;  
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+    flex: 1;  
+    background-color: #f0f8ff; /* Change this to your desired color */  
+
+
+    border-radius: 10px; /* Optional: rounded corners */  
+
+}  
+
+.calculator2 {  
+    background: #fff;  
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+    flex: 1;  
+background-color: #e8f5e9; /* Light green */  
+    border-radius: 10px; /* Optional: rounded corners */  
+}  
+
+.calculator3 {  
+    background: #fff;  
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+    flex: 1;  
+	background-color: #fffde7; /* Light yellow */  
+}  
+
+h2 {  
+    margin-top: 0;  
+}  
+
+.bold-label {  
+    font-weight: bold;  
+}  
