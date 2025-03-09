@@ -1,5 +1,6 @@
 body {  
     font-family: Arial, sans-serif;  
+    text-align: center;
     /*background-color: #f4f4f4;  */
 	background-image: url('back.jpg');
 	background-repeat:no-repeat;
@@ -15,9 +16,23 @@ body {
 	/*background-image: url('back.jpg');*/
     padding: 20px;  /* Optional: add some padding */  
     border-radius: 10px; /* Optional: rounded corners */ 
-
-
 }  
+
+.container2 {  
+    width: 400px;  
+    margin: 0 auto;  
+    text-align: center;  
+    background-color: #3465A4; /* Light blue */ 
+	/*background-image: url('back.jpg');*/
+    padding: 20px;  /* Optional: add some padding */  
+    border-radius: 10px; /* Optional: rounded corners */ 
+}  
+
+
+.input-group, .slider-group {  
+    margin-bottom: 20px;  
+}
+
 
 .calculator1 {  
     background: #fff;  
@@ -49,6 +64,19 @@ background-color: #e8f5e9; /* Light green */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     flex: 1;  
 	background-color: #fffde7; /* Light yellow */  
+}  
+
+.calculator4 {  
+    background: #fff;  
+    padding: 20px;  
+    border-radius: 10px;  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+    flex: 1;  
+    background-color: #FFECD1; /* Change this to your desired color */  
+
+
+    border-radius: 10px; /* Optional: rounded corners */  
+
 }  
 
 h2 {  
