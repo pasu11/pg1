@@ -11,21 +11,21 @@ body {
 .container {  
     display: flex;  
     justify-content: space-between;  
-    gap: 20px;  
+    gap: 10px;  
 	background-color: #3465A4; /* Light blue */ 
 	/*background-image: url('back.jpg');*/
-    padding: 20px;  /* Optional: add some padding */  
-    border-radius: 10px; /* Optional: rounded corners */ 
+    padding: 10px;  /* Optional: add some padding */  
+    border-radius: 20px; /* Optional: rounded corners */ 
 }  
 
 .container2 {  
     width: 400px;  
     margin: 0 auto;  
     text-align: center;  
-    background-color: #3465A4; /* Light blue */ 
+    background-color: #8F5902; /* Light blue */ 
 	/*background-image: url('back.jpg');*/
-    padding: 20px;  /* Optional: add some padding */  
-    border-radius: 10px; /* Optional: rounded corners */ 
+    padding: 10px;  /* Optional: add some padding */  
+    border-radius: 20px; /* Optional: rounded corners */ 
 }  
 
 
@@ -37,7 +37,7 @@ body {
 .calculator1 {  
     background: #fff;  
     padding: 20px;  
-    border-radius: 10px;  
+    border-radius: 20px;  
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     flex: 1;  
     background-color: #f0f8ff; /* Change this to your desired color */  
@@ -50,7 +50,7 @@ body {
 .calculator2 {  
     background: #fff;  
     padding: 20px;  
-    border-radius: 10px;  
+    border-radius: 20px;  
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     flex: 1;  
 background-color: #e8f5e9; /* Light green */  
@@ -60,7 +60,7 @@ background-color: #e8f5e9; /* Light green */
 .calculator3 {  
     background: #fff;  
     padding: 20px;  
-    border-radius: 10px;  
+    border-radius: 20px;  
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     flex: 1;  
 	background-color: #fffde7; /* Light yellow */  

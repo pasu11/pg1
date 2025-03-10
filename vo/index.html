@@ -12,10 +12,10 @@
         <div class="calculator1" id="calc1">  
             <h2>Voltage & Amp to Watt</h2>  
             <label for="voltage1">Vols:</label>  
-            <input type="number" id="voltage1" oninput="calculateWatt()">  
+            <input type="number" id="voltage1" oninput="calculateWatt()" step="0.1">  
             <br><br>
             <label for="amp1">Amp:</label>  
-            <input type="number" id="amp1" oninput="calculateWatt()">  
+            <input type="number" id="amp1" oninput="calculateWatt()" step="0.1">  
             <br><br>
             <label for="watt1" class="bold-label">Watt:</label>  
             <input type="number" id="watt1" disabled>  
@@ -26,7 +26,7 @@
         <div class="calculator2" id="calc2">  
             <h2>Amp & Watt to Voltage</h2>  
             <label for="amp2">Amp:</label>  
-            <input type="number" id="amp2" oninput="calculateVoltage()">  
+            <input type="number" id="amp2" oninput="calculateVoltage()" step="0.1">  
             <br><br>
             <label for="watt2">Watt:</label>  
             <input type="number" id="watt2" oninput="calculateVoltage()">  
@@ -40,7 +40,7 @@
         <div class="calculator3" id="calc3">  
             <h2>Voltage & Watt to Amp</h2>  
             <label for="voltage3">Volts:</label>  
-            <input type="number" id="voltage3" oninput="calculateAmp()">  
+            <input type="number" id="voltage3" oninput="calculateAmp()" step="0.1">  
             <br><br>
             <label for="watt3">Watt:</label>  
             <input type="number" id="watt3" oninput="calculateAmp()">  
