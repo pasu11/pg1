@@ -86,3 +86,11 @@ h2 {
 .bold-label {  
     font-weight: bold;  
 }  
+
+#infoImage {  
+    position: fixed; /* Fixed positioning */  
+    bottom: 0;       /* Aligns to the bottom */  
+    left: 0;         /* Aligns to the left */  
+    margin: 10px;   /* Optional: Adds some margin from the edges */  
+    z-index: 1000;  /* Optional: ensures it's on top of other elements */  
+}
