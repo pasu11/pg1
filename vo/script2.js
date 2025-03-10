@@ -4,8 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const voltageSlider = document.getElementById("voltageSlider");  
     const currentSlider = document.getElementById("currentSlider");  
     const voltageOutput = document.getElementById("voltageOutput");  
+    const voltageOutput2 = document.getElementById("voltageOutput2");  // New Element  
     const currentOutput = document.getElementById("currentOutput");  
+    const currentOutput2 = document.getElementById("currentOutput2");  // New Element  
     const wattageOutput = document.getElementById("wattageOutput");  
+    const wattageOutput2 = document.getElementById("wattageOutput2");  // New Element  
     const resetButton = document.getElementById("resetButton");  
 
     const maxVoltage = 120;  
@@ -30,8 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const updateDisplay = () => {  
         voltageOutput.textContent = voltage.toFixed(2) + " V";  
+        voltageOutput2.textContent = voltage.toFixed(2) + " V";  // Update voltageOutput2  
         currentOutput.textContent = current.toFixed(2) + " A";  
+        currentOutput2.textContent = (current * 0.85).toFixed(2) + " A";  // Update currentOutput2  
         wattageOutput.textContent = "Total Power: " + (voltage * current).toFixed(2) + " W";  
+        wattageOutput2.textContent = "Total Power: " + (voltage * (current * 0.85)).toFixed(2) + " W";  // Update wattageOutput2  
         voltageSlider.value = voltage;  
         currentSlider.value = current;  
     };  
