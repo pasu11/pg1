@@ -11,10 +11,10 @@ body {
 .container {  
     display: flex;  
     justify-content: space-between;  
-    gap: 10px;  
+    gap: 2px;  
 	background-color: #3465A4; /* Light blue */ 
 	/*background-image: url('back.jpg');*/
-    padding: 10px;  /* Optional: add some padding */  
+    padding: 2px;  /* Optional: add some padding */  
     border-radius: 20px; /* Optional: rounded corners */ 
 }  
 
@@ -24,7 +24,7 @@ body {
     text-align: center;  
     background-color: #8F5902; /* Light blue */ 
 	/*background-image: url('back.jpg');*/
-    padding: 10px;  /* Optional: add some padding */  
+    padding: 2px;  /* Optional: add some padding */  
     border-radius: 20px; /* Optional: rounded corners */ 
 }  
 
@@ -36,47 +36,44 @@ body {
 
 .calculator1 {  
     background: #fff;  
-    padding: 20px;  
+    padding: 5px;  
     border-radius: 20px;  
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     flex: 1;  
     background-color: #f0f8ff; /* Change this to your desired color */  
-
-
     border-radius: 10px; /* Optional: rounded corners */  
-
+	font-size: 10px; /* Change this to your desired font size */ 
 }  
 
 .calculator2 {  
     background: #fff;  
-    padding: 20px;  
+    padding: 5px;  
     border-radius: 20px;  
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     flex: 1;  
-background-color: #e8f5e9; /* Light green */  
+	background-color: #e8f5e9; /* Light green */  
     border-radius: 10px; /* Optional: rounded corners */  
+	font-size: 10px; /* Change this to your desired font size */ 
 }  
 
 .calculator3 {  
     background: #fff;  
-    padding: 20px;  
+    padding: 5px;  
     border-radius: 20px;  
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     flex: 1;  
 	background-color: #fffde7; /* Light yellow */  
+	font-size: 10px; /* Change this to your desired font size */ 
 }  
 
 .calculator4 {  
     background: #fff;  
-    padding: 20px;  
-    border-radius: 10px;  
+    padding: 5px;  
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     flex: 1;  
     background-color: #FFECD1; /* Change this to your desired color */  
-
-
-    border-radius: 10px; /* Optional: rounded corners */  
-
+    border-radius: 20px; /* Optional: rounded corners */  
+	font-size: 10px; /* Change this to your desired font size */ 
 }  
 
 h2 {  
@@ -93,4 +90,17 @@ h2 {
     left: 0;         /* Aligns to the left */  
     margin: 10px;   /* Optional: Adds some margin from the edges */  
     z-index: 1000;  /* Optional: ensures it's on top of other elements */  
+	width:25%;  /* Image will take up 50% of its container's width */  
+    height: auto; /* Maintain aspect ratio */  
 }
+
+   .textA {  
+
+        background-color: #FCE94F; /* Light cyan background color */  
+        color: #333; /* Text color */  
+    }  
+   .textB {  
+
+        background-color: #FAF3B2; /* Light cyan background color */  
+        color: #333; /* Text color */  
+    }  
