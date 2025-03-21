@@ -1,0 +1,111 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Ohm's Law Calculator</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+			background-image: url('back.jpg');
+        }  
+        .container {  
+            max-width: 400px;  
+            margin: 0 auto;  
+            padding: 20px;  
+            border: 1px solid #ccc;  
+            border-radius: 10px;  
+			background-color: #FFF6AF; /* Light blue */ 
+        }  
+        .container2 {  
+            max-width: 400px;  
+            margin: 0 auto;  
+            padding: 1px;  
+            border: 1px solid #ccc;  
+            border-radius: 10px;  
+			background-color: #D3D7CF; /* Light blue */ 
+        }  
+        input[type="number"] {  
+            width: 100%;  
+            padding: 8px;  
+            margin: 5px 0;  
+        }  
+        button {  
+            width: 48%;  
+            padding: 10px;  
+            margin-top: 10px;  
+            cursor: pointer;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<div class="container">  
+    <h1>Ohm's Law Calculator</h1>  
+    <label for="voltage">Voltage (V):</label>  
+    <input type="number" id="voltage" step="any">  
+
+    <label for="current">Current (A):</label>  
+    <input type="number" id="current" step="any">  
+
+    <label for="resistance">Resistance (Ω):</label>  
+    <input type="number" id="resistance" step="any">  
+
+    <label for="power">Power (W):</label>  
+    <input type="number" id="power" step="any">  
+
+    <button onclick="calculate()">Calculate</button>  
+    <button onclick="clearFields()">Clear</button>  
+</div>  
+
+<div class=container2>
+<h7>Created with the help of ChatGPT and edited by Pasu</h7>
+<h7><center>no copyright.</h7>
+</div>
+
+<script>  
+    function calculate() {  
+        let V = parseFloat(document.getElementById('voltage').value);  
+        let I = parseFloat(document.getElementById('current').value);  
+        let R = parseFloat(document.getElementById('resistance').value);  
+        let P = parseFloat(document.getElementById('power').value);  
+
+        if (!isNaN(V) && !isNaN(I)) {  
+            R = V / I;  
+            P = V * I;  
+        } else if (!isNaN(V) && !isNaN(R)) {  
+            I = V / R;  
+            P = V * I;  
+        } else if (!isNaN(I) && !isNaN(R)) {  
+            V = I * R;  
+            P = V * I;  
+        } else if (!isNaN(V) && !isNaN(P)) {  
+            I = P / V;  
+            R = V / I;  
+        } else if (!isNaN(I) && !isNaN(P)) {  
+            V = P / I;  
+            R = V / I;  
+        } else if (!isNaN(R) && !isNaN(P)) {  
+            I = Math.sqrt(P / R);  
+            V = I * R;  
+        } else {  
+            alert('Please provide any two values.');  
+            return;  
+        }  
+
+        document.getElementById('voltage').value = V.toFixed(2);  
+        document.getElementById('current').value = I.toFixed(4);  
+        document.getElementById('resistance').value = R.toFixed(2);  
+        document.getElementById('power').value = P.toFixed(4);  
+    }  
+
+    function clearFields() {  
+        document.getElementById('voltage').value = '';  
+        document.getElementById('current').value = '';  
+        document.getElementById('resistance').value = '';  
+        document.getElementById('power').value = '';  
+    }  
+</script>  
+
+</body>  
+</html>  
