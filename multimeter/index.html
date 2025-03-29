@@ -9,78 +9,70 @@
 <body>  
     <div class="center-container">  
         <h2>Multimeter Tolerance Calculator:</h2>  
-    <form id="calculator">  
-        <div class="container">  
-            <label for="range">Range:</label>  
-<!--<div class="tooltip"> -->
-            <select id="range">  
-                <option value="0.001">x.xxx</option>  
-                <option value="0.01" selected>xx.xx</option>  
-                <option value="0.1">xxx.x</option>  
-            </select>  
- <!--  <span class="tooltiptext">Select Range: </br>
-x.xxx		- 0.001
-</br>
-xx.xx		- 0.01
-</br>
-xxx.x		- 0.1
-
-</span> 
-</div>-->
-</br>
-<!--<div class="tooltip"> -->
-            <label for="accuracy-percent">Accuracy %:</label>  
-            <input type="number" id="accuracy-percent" step="0.1">  
-<!--   <span class="tooltiptext">multimeter accuracy in %</span> 
-</div>-->
-</br>
-<!--<div class="tooltip">-->
-            <label for="accuracy-digit">Accuracy Digit:</label>  
-            <input type="number" id="accuracy-digit">  
- <!--        <span class="tooltiptext">multimeter digit accuracy</span> 
-</div>-->
-
-
-        </div>  
-
-Choose only one below:
-        <div class="container-horizontal" style="background-color: #d5f5e3;">  
-            <div> 
-                <label for="multimeter-input">Multimeter Input:</label>  
-                <input type="number" id="multimeter-input" step="0.0001">  
+        <form id="calculator">  
+            <div class="container">  
+                <div class="input-group">  
+                    <label for="range">Range:</label>  
+                    <select id="range">  
+                        <option value="0.001">x.xxx</option>  
+                        <option value="0.01" selected>xx.xx</option>  
+                        <option value="0.1">xxx.x</option>  
+                    </select>  
+                </div>  
+                <div class="input-group">  
+                    <label for="accuracy-percent">Accuracy %:</label>  
+                    <input type="number" id="accuracy-percent" step="0.1">  
+                </div>  
+                <div class="input-group">  
+                    <label for="accuracy-digit">Accuracy Digit:</label>  
+                    <input type="number" id="accuracy-digit">  
+                </div>  
             </div>  
-            <div>  
-                <label for="multimeter-output">Multimeter Display:</label>  
-                <input type="number" id="multimeter-output" step="0.0001">  
+
+            <p>Choose only one below:</p>  
+            <div class="container-horizontal" style="background-color: #d5f5e3;">  
+                <div>   
+                    <label for="multimeter-input">Multimeter Input:</label>  
+                    <input type="number" id="multimeter-input" step="0.0001">  
+                </div>  
+                <div>  
+                    <label for="multimeter-output">Multimeter Display:</label>  
+                    <input type="number" id="multimeter-output" step="0.0001">  
+                </div>  
             </div>  
-        </div>  
 
-        <div class="container">  
-            <label for="tolerance-percent">Tolerance %:</label>  
-            <input type="number" id="tolerance-percent" class="readonly" readonly>  
+            <div class="container">  
+                <div class="input-group">  
+                    <label for="tolerance-percent">Tolerance %:</label>  
+                    <input type="number" id="tolerance-percent" class="readonly" readonly>  
+                </div>  
+                <div class="input-group">  
+                    <label for="tolerance-digit">Tolerance Digit:</label>  
+                    <input type="number" id="tolerance-digit" class="readonly" readonly>  
+                </div>  
+                <div class="input-group">  
+                    <label for="total-tolerance">Total Tolerance:</label>  
+                    <input type="number" id="total-tolerance" class="readonly" readonly>  
+                </div>  
+                <div class="input-group">  
+                    <label for="min-value">Min Value:</label>  
+                    <input type="number" id="min-value" class="readonly" readonly>  
+                </div>  
+                <div class="input-group">  
+                    <label for="max-value">Max Value:</label>  
+                    <input type="number" id="max-value" class="readonly" readonly>  
+                </div>  
+            </div>  
 
-            <label for="tolerance-digit">Tolerance Digit:</label>  
-            <input type="number" id="tolerance-digit" class="readonly" readonly>  
+            <div class="button">  
+                <button type="button" onclick="calculate()">Calculate</button>  
+                <button type="reset" onclick="resetForm()">Reset</button>  
+            </div> <!-- Moved button container out of the form -->  
+        </form>  
 
-            <label for="total-tolerance">Total Tolerance:</label>  
-            <input type="number" id="total-tolerance" class="readonly" readonly>  
-        </div>  
-
-        <div class="container-horizontal"  style="background-color: #d5f5e3;">  
-            <label for="min-value">Min Value:</label>  
-            <input type="number" id="min-value" class="readonly" readonly>  
-
-            <label for="max-value">Max Value:</label>  
-            <input type="number" id="max-value" class="readonly" readonly>  
-        </div>  
-
-        <button type="button" onclick="calculate()">Calculate</button>  
-        <button type="reset" onclick="resetForm()">Reset</button>  
-    </form>  
-    </br> 
-<h7>Codes generated by ChatGPT and modified by pasu. No copyright.</h7>
-</div>
+        <br/>   
+        <h4>Codes generated by ChatGPT and modified by pasu. No copyright.</h4>  
+    </div>  
     <script src="script.js"></script>  
-
 </body>  
 </html>  

@@ -1,83 +1,102 @@
-
 body {  
     font-family: Arial, sans-serif;  
-	background-image: url('back.jpg');
+    background-image: url('back.jpg');  
     color: #333;  
     padding: 20px;  
     display: flex;  
     justify-content: center;  
     align-items: center;  
-   /* min-height: 50vh;  */
-} 
+}  
+
 .center-container {  
     text-align: center;  
-} 
+}   
 
 h2 {  
     color: #0044cc;  
 }  
+
 form {  
-    display: inline-block;  
-    width: 550px;  
+    display: flex;  
+    flex-direction: column; /* Stack elements vertically */  
+    width: 400px;  
 }  
+
+.container-wrapper {  
+    display: flex;  
+    justify-content: space-between;  
+    flex-direction: column; /* Stack items vertically */  
+}  
+
 .container, .container-horizontal {  
     background-color: #eaeaea;  
-    padding:15px;  
+    padding: 15px;  
     margin-bottom: 15px;  
     border-radius: 8px;  
 }  
+
 .container-horizontal {  
     display: flex;  
     justify-content: space-between;  
 }  
+
 .container-horizontal div {  
     width: 48%;  
 }  
+
 label {  
     margin-bottom: 5px;  
     display: block;  
 }  
+
 input, select, button {  
     width: 100%;  
     padding: 5px;  
     margin-top: 5px;  
 }  
+
 button {  
     cursor: pointer;  
     width: calc(50% - 10px);  
 }  
+
 button + button {  
     margin-left: 10px;  
 }  
+
 input.readonly {  
     background-color: #f0f0f0;  
 }  
-.tooltip {  
-    position: relative;  
-    display: inline-block;  
+
+.container-wrapper-right {  
+    align-items: flex-start; /* Align left */  
 }  
 
-.tooltiptext {  
-    visibility: hidden;  
-    width: 160px; /* Adjust width as needed */  
-    background-color: #555;  
-    color: #fff;  
-    text-align: center;  
-    border-radius: 5px;  
-    padding: 5px;  
-    position: absolute;  
-    z-index: 1;  
-    bottom: 125%; /* Position above the select box */  
-    left: 50%;  
-    margin-left: -80px; /* Adjust to center the tooltip */  
-    opacity: 0;  
-    transition: opacity 0.3s;  
+.container-wrapper-left {  
+    align-items: flex-start; /* Align left */  
 }  
 
-.tooltip:hover .tooltiptext {  
-    visibility: visible;  
-    opacity: 1;  
-}  
+
+
 .container:nth-child(1) { background-color: #f5f5dc; }  
 .container:nth-child(3) { background-color: #d0e1f9; }  
 .container:nth-child(4) { background-color: #f8d7da; }  
+
+.button-container {  
+    display: flex;  
+    justify-content: center; /* Center the buttons */  
+    margin-top: 10px; /* Space above the buttons */  
+}  
+
+.input-group {  
+    display: flex; /* Use flexbox to align items in a row */  
+    justify-content: space-between; /* Space between the label and input */  
+    align-items: center; /* Center align the items vertically */  
+    margin-bottom: 10px; /* Space between rows */  
+}  
+
+label {  
+    margin-right: 10px; /* Adjust space between label and input */  
+    flex: 1; /* Allow the label to take available space */  
+    min-width: 150px; /* Minimum width for labels */  
+}  
