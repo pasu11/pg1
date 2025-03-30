@@ -1,3 +1,14 @@
+    function updateAccuracy() {  
+        const selectElement = document.getElementById('range');  
+        const selectedOption = selectElement.options[selectElement.selectedIndex];  
+        
+        const percentage = selectedOption.getAttribute('percent_');  
+        const digit = selectedOption.getAttribute('digit_');  
+        
+        document.getElementById('accuracy-percent').value = percentage || ''; // Set value or empty  
+        document.getElementById('accuracy-digit').value = digit || ''; // Set value or empty  
+    }  
+    
 function calculate() {  
     const range = parseFloat(document.getElementById('range').value);  
     const accuracyPercent = parseFloat(document.getElementById('accuracy-percent').value) / 100;  

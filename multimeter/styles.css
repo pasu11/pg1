@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;  
     background-image: url('back.jpg');  
     color: #333;  
-    padding: 20px;  
+    padding: 0px;  
     display: flex;  
     justify-content: center;  
     align-items: center;  
@@ -30,8 +30,8 @@ form {
 
 .container, .container-horizontal {  
     background-color: #eaeaea;  
-    padding: 15px;  
-    margin-bottom: 15px;  
+    padding: 5px;  
+    margin-bottom: 5px;  
     border-radius: 8px;  
 }  
 
@@ -51,7 +51,7 @@ label {
 
 input, select, button {  
     width: 100%;  
-    padding: 5px;  
+    padding: 2px;  
     margin-top: 5px;  
 }  
 
@@ -85,14 +85,14 @@ input.readonly {
 .button-container {  
     display: flex;  
     justify-content: center; /* Center the buttons */  
-    margin-top: 10px; /* Space above the buttons */  
+    margin-top: 5px; /* Space above the buttons */  
 }  
 
 .input-group {  
     display: flex; /* Use flexbox to align items in a row */  
     justify-content: space-between; /* Space between the label and input */  
     align-items: center; /* Center align the items vertically */  
-    margin-bottom: 10px; /* Space between rows */  
+    margin-bottom: 5px; /* Space between rows */  
 }  
 
 label {  
