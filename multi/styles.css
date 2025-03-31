@@ -65,7 +65,11 @@ button + button {
 }  
 
 input.readonly {  
-    background-color: #f0f0f0;  
+    background-color: #EEEEEC;  
+}  
+
+input.readonly2 {  
+    background-color: #FCE94F;  
 }  
 
 .container-wrapper-right {  
