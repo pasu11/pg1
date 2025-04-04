@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;  
     text-align: center;
     /*background-color: #f4f4f4;  */
-	background-image: url('back.jpg');
+	background-image: url('../e/back.jpg');
 	background-repeat:no-repeat;
 	/*background-size:cover;*/
     padding: 5px;  

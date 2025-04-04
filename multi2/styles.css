@@ -1,6 +1,6 @@
 body {  
     font-family: Arial, sans-serif;  
-    background-image: url('back.jpg');  
+    background-image: url('../e/back.jpg');  
     color: #333;  
     padding: 20px;  
     display: flex;  
