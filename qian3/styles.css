@@ -1,0 +1,46 @@
+body {  
+    font-family: Arial, sans-serif;  
+    line-height: 1.6;  
+    background-color: #FFE6BE;  
+    color: #333;  
+    padding: 20px;  
+    max-width: 800px;  
+    margin: auto;  
+}  
+
+h1 {  
+    color: #d35400;  
+    text-align: center;  
+}  
+
+.section {  
+    margin-bottom: 20px;  
+}  
+
+.interpretation, .history, .summary, .fortune {  
+    background-color: #FFE6BE;  
+    border-radius: 5px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    padding: 15px;  
+    margin-top: 10px;  
+}  
+
+.interpretation {  
+    display: flex;  
+    align-items: flex-start;  
+}  
+
+.interpretation img {  
+    max-width: 150px;  
+    margin-left: 15px;  
+    border-radius: 5px;  
+}  
+
+ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+li {  
+    margin: 5px 0;  
+}  
