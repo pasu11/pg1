@@ -40,7 +40,7 @@
 
         textarea {
             resize: vertical; /* Allows manual resizing in height */
-            min-height: 100px; /* Minimum height for 10 rows */
+            min-height: 150px; /* Minimum height for 15 rows */
         }
 
         button, input[type="button"] {
@@ -51,7 +51,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin-left: 5px;
-            width: 60px;
+            width: 80px;
         }
 
         button:hover, input[type="button"]:hover {
@@ -94,12 +94,13 @@
         <div class="form-group">
             <label for="apiKey">OpenAI API Key:</label>
             <input type="text" id="apiKey" placeholder="Enter your OpenAI API key">
-            <input type="button" value="Load" onclick="loadApiKey()">
+<br></br>
             <input type="button" value="Save" onclick="saveApiKey()">
+			<input type="button" value="Load" onclick="loadApiKey()">
         </div>
         <div class="form-group">
             <label for="prompt">Image Prompt:</label>
-            <textarea id="prompt" placeholder="Enter your image description here (up to 10 lines)"></textarea>
+            <textarea id="prompt" placeholder="Enter your image description here (maximum 15 rows)"></textarea>
         </div>
         <div class="form-group">
             <label for="size">Image Size:</label>
@@ -156,7 +157,7 @@
             if (apiKey) {
                 document.getElementById('apiKey').value = apiKey;
             } else {
-                alert('No API Key found. Please save your API key first.');
+                /*alert('No API Key found. Please save your API key first.');*/
             }
         }
 
@@ -210,5 +211,10 @@
         // Load the API key from the cookie on page load
         document.addEventListener('DOMContentLoaded', loadApiKey);
     </script>
+<br></br>
+<div style="text-align: center;">
+    <a href="https://platform.openai.com/usage" target="_blank">OpenAi Usage</a>
+</div>
+
 </body>
 </html>
