@@ -91,7 +91,7 @@
             margin-top: 20px;
             text-align: left;
             width: 80%;
-            margin-left: -5%;
+            margin-left: 21%;
         }
         hr {
             width: 80%;
@@ -163,8 +163,8 @@
     const shengbeiTypes = {
         'yin_yang': { image: 'sign2.gif', text: '圣杯', isShengbei: true },
         'yang_yin': { image: 'sign3.gif', text: '圣杯', isShengbei: true },
-        'yin_yin': { image: 'sign1.gif', text: '笑杯', isShengbei: true },
-        'yang_yang': { image: 'sign0.gif', text: '笑杯', isShengbei: true }
+        'yin_yin': { image: 'sign1.gif', text: '笑杯', isShengbei: false },
+        'yang_yang': { image: 'sign0.gif', text: '笑杯', isShengbei: false }
     };
 
     const qianImage = document.getElementById('qianImage');
@@ -240,25 +240,27 @@
         }, 1111);
     }
 
-    function checkShengbeiResult(result) {
-        if (!result.isShengbei) {
-            successMessage.textContent = '您掷出笑杯了，此签不准。';
+function checkShengbeiResult(result) {
+    if (!result.isShengbei) {
+        // 这里更新成功信息并设置按钮文本为“重新抽签”
+        successMessage.textContent = '您掷出笑杯了，此签不准。';
+        successMessage.style.display = 'block';
+        actionButton.disabled = false;
+        actionButton.textContent = '重新抽签';
+    } else {
+        if (shengbeiCount < 3) {
+            // 如果掷杯次数少于3次且为圣杯，继续掷杯
+            actionButton.disabled = false;
+            actionButton.textContent = `第${shengbeiCount + 1}次掷杯`;
+        } else {
+            // 如果连续三次掷出圣杯，更新页面
+            successMessage.textContent = '恭喜，您连续掷出了三次圣杯！';
             successMessage.style.display = 'block';
             actionButton.disabled = false;
-            actionButton.textContent = '重新抽签';
-        } else {
-            if (shengbeiCount < 3) {
-                actionButton.disabled = false;
-                actionButton.textContent = `第${shengbeiCount + 1}次掷杯`;
-            } else {
-                successMessage.textContent = '恭喜，您连续掷出了三次圣杯！';
-                successMessage.style.display = 'block';
-                actionButton.disabled = false;
-                actionButton.textContent = '查看签文';
-            }
+            actionButton.textContent = '查看签文';
         }
     }
-
+}
 function showFinalQianwen() {
     // 清除原有内容
     centerItem.innerHTML = '';
