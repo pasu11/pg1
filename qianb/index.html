@@ -11,21 +11,27 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #fff;
+            
             margin: 0;
             font-family: "楷体", serif;
+            /* background-color: #fff; */
+            background-image: url('back.jpg');
+			background-repeat: repeat; /* This will tile the image */
+}
         }
         h1 {
             margin-top: 20px;
-            font-size: 24px;
+            font-size: 28px;
             color: #8B4513;
+            font-weight: bold;
         }
+
         .container {
             display: flex;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
-            background-color: #fff;
+            /* background-color: #fff; */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .item {
@@ -85,7 +91,7 @@
             margin-top: 20px;
             text-align: left;
             width: 80%;
-            margin-left: 10%;
+            margin-left: -5%;
         }
         hr {
             width: 80%;
@@ -124,24 +130,22 @@
 
 <h1>观音灵签</h1>
 
-<div class="container">
-    <div class="item left-right">
-        <img src="guanyin1.gif" alt="Guanyin 1">
-        <p>南海观音菩萨</p>
-    </div>
-    <div class="item center" id="centerItem">
-        <img id="qianImage" src="qian.gif" alt="Bamboo Sticks">
-        <div class="qian-number" id="qianNumber"></div>
-        <div class="shengbei-status" id="shengbeiStatus"></div>
-        <div class="success-message" id="successMessage"></div>
-        <div class="error-message" id="errorMessage">图片加载失败，请检查图片文件</div>
-        <button class="button" id="actionButton">开始抽签</button>
-    </div>
-    <div class="item left-right">
-        <img src="guanyin2.gif" alt="Guanyin 2">
-        <p>观音菩萨</p>
-    </div>
-</div>
+	<div class="container">
+		<div class="item left-right">
+			<img src="guanyin1.gif" alt="Guanyin 1">
+		</div>
+		<div class="item center" id="centerItem">
+			<img id="qianImage" src="qian.gif" alt="Bamboo Sticks">
+			<div class="qian-number" id="qianNumber"></div>
+			<div class="shengbei-status" id="shengbeiStatus"></div>
+			<div class="success-message" id="successMessage"></div>
+			<div class="error-message" id="errorMessage">图片加载失败，请检查图片文件</div>
+			<button class="button" id="actionButton">开始抽签</button>
+		</div>
+		<div class="item left-right">
+			<img src="guanyin2.gif" alt="Guanyin 2">
+		</div>
+	</div>
 
 <footer>
     <ol>
