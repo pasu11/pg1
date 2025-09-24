@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>观音灵签</title>
     <style>
         body {
@@ -11,13 +11,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            
             margin: 0;
             font-family: "楷体", serif;
-            /* background-color: #fff; */
             background-image: url('back.jpg');
-			background-repeat: repeat; /* This will tile the image */
-}
+            background-repeat: repeat;
         }
         h1 {
             margin-top: 20px;
@@ -25,13 +22,11 @@
             color: #8B4513;
             font-weight: bold;
         }
-
         .container {
             display: flex;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
-            /* background-color: #fff; */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .item {
@@ -130,22 +125,22 @@
 
 <h1>观音灵签</h1>
 
-	<div class="container">
-		<div class="item left-right">
-			<img src="guanyin1.gif" alt="Guanyin 1">
-		</div>
-		<div class="item center" id="centerItem">
-			<img id="qianImage" src="qian.gif" alt="Bamboo Sticks">
-			<div class="qian-number" id="qianNumber"></div>
-			<div class="shengbei-status" id="shengbeiStatus"></div>
-			<div class="success-message" id="successMessage"></div>
-			<div class="error-message" id="errorMessage">图片加载失败，请检查图片文件</div>
-			<button class="button" id="actionButton">开始抽签</button>
-		</div>
-		<div class="item left-right">
-			<img src="guanyin2.gif" alt="Guanyin 2">
-		</div>
-	</div>
+<div class="container">
+    <div class="item left-right">
+        <img src="guanyin1.gif" alt="Guanyin 1">
+    </div>
+    <div class="item center" id="centerItem">
+        <img id="qianImage" src="qian.gif" alt="Bamboo Sticks">
+        <div class="qian-number" id="qianNumber"></div>
+        <div class="shengbei-status" id="shengbeiStatus"></div>
+        <div class="success-message" id="successMessage"></div>
+        <div class="error-message" id="errorMessage">图片加载失败，请检查图片文件</div>
+        <button class="button" id="actionButton">开始抽签</button>
+    </div>
+    <div class="item left-right">
+        <img src="guanyin2.gif" alt="Guanyin 2">
+    </div>
+</div>
 
 <footer>
     <ol>
@@ -157,9 +152,12 @@
 </footer>
 
 <script>
+    // 状态变量
     let currentQianNumber = 0;
     let shengbeiCount = 0;
+    let isShaking = false;
 
+    // 圣杯类型定义
     const shengbeiTypes = {
         'yin_yang': { image: 'sign2.gif', text: '圣杯', isShengbei: true },
         'yang_yin': { image: 'sign3.gif', text: '圣杯', isShengbei: true },
@@ -167,17 +165,33 @@
         'yang_yang': { image: 'sign0.gif', text: '笑杯', isShengbei: false }
     };
 
-    const qianImage = document.getElementById('qianImage');
-    const qianNumber = document.getElementById('qianNumber');
-    const shengbeiStatus = document.getElementById('shengbeiStatus');
-    const successMessage = document.getElementById('successMessage');
-    const errorMessage = document.getElementById('errorMessage');
-    const actionButton = document.getElementById('actionButton');
-    const centerItem = document.getElementById('centerItem');
+    // DOM元素引用
+    let qianImage, qianNumber, shengbeiStatus, successMessage, errorMessage, actionButton, centerItem;
 
-    qianImage.addEventListener('click', handleAction);
-    actionButton.addEventListener('click', handleAction);
+    // 初始化函数
+    function init() {
+        qianImage = document.getElementById('qianImage');
+        qianNumber = document.getElementById('qianNumber');
+        shengbeiStatus = document.getElementById('shengbeiStatus');
+        successMessage = document.getElementById('successMessage');
+        errorMessage = document.getElementById('errorMessage');
+        actionButton = document.getElementById('actionButton');
+        centerItem = document.getElementById('centerItem');
 
+        // 绑定事件监听器
+        qianImage.addEventListener('click', handleAction);
+        actionButton.addEventListener('click', handleAction);
+        
+        // 图片加载错误处理
+        qianImage.onerror = function() {
+            errorMessage.style.display = 'block';
+        };
+    }
+
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', init);
+
+    // 主处理函数
     function handleAction() {
         const buttonText = actionButton.textContent;
 
@@ -192,7 +206,11 @@
         }
     }
 
+    // 开始摇签
     function startYaoQian() {
+        if (isShaking) return; // 防止重复点击
+        
+        isShaking = true;
         resetDisplay();
 
         qianImage.classList.add('shaking');
@@ -206,9 +224,11 @@
 
             currentQianNumber = Math.floor(Math.random() * 100) + 1;
             showQianResult();
+            isShaking = false;
         }, 1111);
     }
 
+    // 显示摇签结果
     function showQianResult() {
         qianNumber.textContent = `您刚才抽的是第${currentQianNumber}签`;
         qianNumber.style.display = 'block';
@@ -222,13 +242,18 @@
         shengbeiCount = 0;
     }
 
+    // 开始掷杯
     function startShengbei() {
         actionButton.disabled = true;
         actionButton.textContent = '掷杯中...';
         shengbeiStatus.textContent = '掷杯中...';
 
         setTimeout(() => {
-            const shengbeiKeys = Object.keys(shengbeiTypes);
+			// 原几率（
+			/* const shengbeiKeys = ['yin_yang', 'yang_yin']; */
+			
+            // 圣杯几率4：2=6（20.5%）
+const shengbeiKeys = ['yin_yang', 'yang_yin', 'yin_yang', 'yang_yin', 'yin_yang', 'yang_yin','yin_yang', 'yang_yin', 'yin_yang', 'yang_yin', 'yin_yang', 'yang_yin', 'yin_yin', 'yang_yang'];
             const randomKey = shengbeiKeys[Math.floor(Math.random() * shengbeiKeys.length)];
             const shengbeiResult = shengbeiTypes[randomKey];
 
@@ -240,80 +265,82 @@
         }, 1111);
     }
 
-function checkShengbeiResult(result) {
-    if (!result.isShengbei) {
-        // 这里更新成功信息并设置按钮文本为“重新抽签”
-        successMessage.textContent = '您掷出笑杯了，此签不准。';
-        successMessage.style.display = 'block';
-        actionButton.disabled = false;
-        actionButton.textContent = '重新抽签';
-    } else {
-        if (shengbeiCount < 3) {
-            // 如果掷杯次数少于3次且为圣杯，继续掷杯
-            actionButton.disabled = false;
-            actionButton.textContent = `第${shengbeiCount + 1}次掷杯`;
-        } else {
-            // 如果连续三次掷出圣杯，更新页面
-            successMessage.textContent = '恭喜，您连续掷出了三次圣杯！';
+    // 检查掷杯结果
+    function checkShengbeiResult(result) {
+        if (!result.isShengbei) {
+            successMessage.textContent = '您掷出笑杯了，此签不准。';
             successMessage.style.display = 'block';
             actionButton.disabled = false;
-            actionButton.textContent = '查看签文';
+            actionButton.textContent = '重新抽签';
+        } else {
+            if (shengbeiCount < 3) {
+                actionButton.disabled = false;
+                actionButton.textContent = `第${shengbeiCount + 1}次掷杯`;
+            } else {
+                successMessage.textContent = '恭喜，您连续掷出了三次圣杯！';
+                successMessage.style.display = 'block';
+                actionButton.disabled = false;
+                actionButton.textContent = '查看签文';
+            }
         }
     }
-}
-function showFinalQianwen() {
-    // 清除原有内容
-    centerItem.innerHTML = '';
 
-    // 显示签文图片
-    const qianImageElement = document.createElement('img');
-    qianImageElement.src = `qian${currentQianNumber}.gif`;
-    qianImageElement.alt = `签文 ${currentQianNumber}`;
-    qianImageElement.style.width = '150px';  // 设定初始显示的宽度
-    qianImageElement.style.height = 'auto';  // 保持图片宽高比
+    // 显示最终签文 - 修正后的版本
+    function showFinalQianwen() {
+        // 清除原有内容
+        centerItem.innerHTML = '';
 
-    // 添加图片点击事件，打开新窗口显示大图
-    qianImageElement.onclick = () => {
-        const newWindow = window.open('', '_blank');
-        newWindow.document.write(`
-            <html>
-            <head>
-                <title>签文 ${currentQianNumber}</title>
-                <style>
-                    body {
-                        background-color: white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100vh;
-                        margin: 0;
-                    }
-                    img {
-                        width: auto;
-                        max-width: 90%;
-                        height: auto;
-                        transform: scale(1.1); /* 放大图片 */
-                    }
-                </style>
-            </head>
-            <body>
-                <img src="${qianImageElement.src}" alt="签文 ${currentQianNumber}">
-            </body>
-            </html>
-        `);
-        newWindow.document.close();
-    };
+        // 显示签文图片
+        const qianImageElement = document.createElement('img');
+        qianImageElement.src = `qian${currentQianNumber}.gif`;
+        qianImageElement.alt = `签文 ${currentQianNumber}`;
+        qianImageElement.style.width = '150px';
+        qianImageElement.style.height = 'auto';
 
-    // 添加重新抽签按钮
-    const resetButton = document.createElement('button');
-    resetButton.className = 'button';
-    resetButton.textContent = '重新抽签';
-    resetButton.onclick = resetAll;
+        // 添加图片点击事件，打开新窗口显示大图
+        qianImageElement.onclick = () => {
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <html>
+                <head>
+                    <title>签文 ${currentQianNumber}</title>
+                    <style>
+                        body {
+                            background-color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            margin: 0;
+                        }
+                        img {
+                            width: auto;
+                            max-width: 90%;
+                            height: auto;
+                            transform: scale(1.1);
+                        }
+                    </style>
+                </head>
+                <body>
+                    <img src="${qianImageElement.src}" alt="签文 ${currentQianNumber}">
+                </body>
+                </html>
+            `);
+            newWindow.document.close();
+        };
 
-    centerItem.appendChild(qianImageElement);
-    centerItem.appendChild(resetButton);
-}
+        // 添加重新抽签按钮 - 修正部分
+        const resetButton = document.createElement('button');
+        resetButton.className = 'button';
+        resetButton.textContent = '重新抽签';
+        // 使用addEventListener而不是onclick属性
+        resetButton.addEventListener('click', resetAll);
 
+        centerItem.appendChild(qianImageElement);
+        centerItem.appendChild(resetButton);
+    }
+
+    // 重置显示状态
     function resetDisplay() {
         qianNumber.style.display = 'none';
         shengbeiStatus.style.display = 'none';
@@ -322,13 +349,14 @@ function showFinalQianwen() {
         qianImage.src = 'qian.gif';
     }
 
+    // 重置所有状态
     function resetAll() {
-        qianNumber.style.display = 'none';
-        shengbeiStatus.style.display = 'none';
-        successMessage.style.display = 'none';
-        errorMessage.style.display = 'none';
+        // 重置状态变量
         currentQianNumber = 0;
         shengbeiCount = 0;
+        isShaking = false;
+        
+        // 恢复原始HTML结构
         centerItem.innerHTML = `
             <img id="qianImage" src="qian.gif" alt="Bamboo Sticks">
             <div class="qian-number" id="qianNumber"></div>
@@ -337,13 +365,12 @@ function showFinalQianwen() {
             <div class="error-message" id="errorMessage">图片加载失败，请检查图片文件</div>
             <button class="button" id="actionButton">开始抽签</button>
         `;
-        document.getElementById('qianImage').addEventListener('click', handleAction);
-        document.getElementById('actionButton').addEventListener('click', handleAction);
+        
+        // 重新初始化
+        init();
+        
+        console.log("重置完成，可以重新抽签");
     }
-
-    qianImage.onerror = function() {
-        errorMessage.style.display = 'block';
-    };
 </script>
 </body>
 </html>
